@@ -1,0 +1,247 @@
+{
+  "users": [
+    {
+      "name": "asdfghjk",
+      "email": "asdfghjk@gmail.com",
+      "password": "1234567890",
+      "conformPassword": "1234567890",
+      "cart": [
+        {
+          "id": 1,
+          "name": "Acoustic Guitar",
+          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+          "description": "Full-size acoustic guitar with warm sound.",
+          "price": 4500,
+          "isStock": true,
+          "brand": "Yamaha",
+          "color": "Natural"
+        },
+        {
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
+          "isStock": false,
+          "brand": "Fender",
+          "color": "Black"
+        }
+      ],
+      "orders": [],
+      "wishlist": [],
+      "isBlock": false,
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Acoustic Guitar",
+      "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+      "description": "Full-size acoustic guitar with warm sound.",
+      "price": 4500,
+      "isStock": true,
+      "brand": "Yamaha",
+      "color": "Natural"
+    },
+    {
+      "id": 2,
+      "name": "Electric Guitar",
+      "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
+      "description": "Solid body electric guitar for rock music.",
+      "price": 9000,
+      "isStock": false,
+      "brand": "Fender",
+      "color": "Black"
+    },
+    {
+      "id": 3,
+      "name": "Bass Guitar",
+      "image": "https://images.unsplash.com/photo-1558098329-a11cff621064",
+      "description": "4-string bass guitar with deep tone.",
+      "price": 8500,
+      "isStock": false,
+      "brand": "Ibanez",
+      "color": "Blue"
+    },
+    {
+      "id": 4,
+      "name": "Classical Guitar",
+      "image": "https://images.unsplash.com/photo-1504704911898-68304a7d2807",
+      "description": "Nylon-string guitar for classical music.",
+      "price": 5000,
+      "isStock": true,
+      "brand": "Juarez",
+      "color": "Brown"
+    },
+    {
+      "id": 5,
+      "name": "Digital Keyboard",
+      "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76",
+      "description": "61-key keyboard with multiple sounds.",
+      "price": 12000,
+      "isStock": true,
+      "brand": "Casio",
+      "color": "White"
+    },
+    {
+      "id": 6,
+      "name": "Grand Piano",
+      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0",
+      "description": "Professional grand piano.",
+      "price": 250000,
+      "isStock": false,
+      "brand": "Steinway",
+      "color": "Black"
+    },
+    {
+      "id": 7,
+      "name": "Drum Set",
+      "image": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7",
+      "description": "5-piece drum kit for live performance.",
+      "price": 24000,
+      "isStock": true,
+      "brand": "Pearl",
+      "color": "Red"
+    },
+    {
+      "id": 8,
+      "name": "Electronic Drum Pad",
+      "image": "https://images.unsplash.com/photo-1606937683023-4f8c34f35c5c",
+      "description": "Portable electronic drum pad.",
+      "price": 11000,
+      "isStock": true,
+      "brand": "Roland",
+      "color": "Black"
+    },
+    {
+      "id": 9,
+      "name": "Violin",
+      "image": "https://images.unsplash.com/photo-1525201548942-d8732f6617a0",
+      "description": "Classical violin for beginners.",
+      "price": 6000,
+      "isStock": true,
+      "brand": "Stentor",
+      "color": "Brown"
+    },
+    {
+      "id": 10,
+      "name": "Electric Violin",
+      "image": "https://images.unsplash.com/photo-1612196808214-6a8d40c35b20",
+      "description": "Modern electric violin.",
+      "price": 14000,
+      "isStock": false,
+      "brand": "Yamaha",
+      "color": "Black"
+    },
+    {
+      "id": 11,
+      "name": "Flute",
+      "image": "https://images.unsplash.com/photo-1600180758890-6b94519a9b7a",
+      "description": "Silver flute for students.",
+      "price": 3200,
+      "isStock": true,
+      "brand": "Yamaha",
+      "color": "Silver"
+    },
+    {
+      "id": 12,
+      "name": "Clarinet",
+      "image": "https://images.unsplash.com/photo-1617196038436-24a67d95c5fa",
+      "description": "Wooden clarinet with smooth tone.",
+      "price": 7000,
+      "isStock": true,
+      "brand": "Buffet",
+      "color": "Black"
+    },
+    {
+      "id": 13,
+      "name": "Saxophone",
+      "image": "https://images.unsplash.com/photo-1508020963102-c6c723be5764",
+      "description": "Alto saxophone for jazz music.",
+      "price": 18000,
+      "isStock": false,
+      "brand": "Selmer",
+      "color": "Golden"
+    },
+    {
+      "id": 14,
+      "name": "Trumpet",
+      "image": "https://images.unsplash.com/photo-1603112572220-947c5d5c9b8c",
+      "description": "Brass trumpet with bright sound.",
+      "price": 6500,
+      "isStock": true,
+      "brand": "Bach",
+      "color": "Gold"
+    },
+    {
+      "id": 15,
+      "name": "Trombone",
+      "image": "https://images.unsplash.com/photo-1611605698335-6b7db44c7c6c",
+      "description": "Slide trombone for orchestras.",
+      "price": 9000,
+      "isStock": true,
+      "brand": "Conn",
+      "color": "Brass"
+    },
+    {
+      "id": 16,
+      "name": "Tabla",
+      "image": "https://images.unsplash.com/photo-1623227993940-19b6a8f1a2c3",
+      "description": "Traditional Indian tabla set.",
+      "price": 5500,
+      "isStock": true,
+      "brand": "SG Musical",
+      "color": "Wood"
+    },
+    {
+      "id": 17,
+      "name": "Harmonium",
+      "image": "https://images.unsplash.com/photo-1602332334096-7ad90b04d3f6",
+      "description": "Hand-pumped harmonium.",
+      "price": 9500,
+      "isStock": false,
+      "brand": "Bina",
+      "color": "Brown"
+    },
+    {
+      "id": 18,
+      "name": "Sitar",
+      "image": "https://images.unsplash.com/photo-1598387841274-8a8d5e8c1f2d",
+      "description": "Classical Indian sitar.",
+      "price": 22000,
+      "isStock": true,
+      "brand": "Rikhi Ram",
+      "color": "Natural"
+    },
+    {
+      "id": 19,
+      "name": "Veena",
+      "image": "https://images.unsplash.com/photo-1627905436325-93d3536bc3a1",
+      "description": "Traditional veena instrument.",
+      "price": 30000,
+      "isStock": false,
+      "brand": "Gopal",
+      "color": "Brown"
+    },
+    {
+      "id": 20,
+      "name": "Mridangam",
+      "image": "https://images.unsplash.com/photo-1628694812098-8db4c58d8b58",
+      "description": "South Indian percussion instrument.",
+      "price": 8000,
+      "isStock": true,
+      "brand": "Mani",
+      "color": "Wood"
+    }
+  ],
+  "orders": [],
+  "carts": [
+    {
+      "id": "1",
+      "product": [
+        1
+      ]
+    }
+  ]
+}
