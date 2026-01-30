@@ -1,32 +1,11 @@
 {
   "users": [
     {
-      "name": "asdfghjk",
-      "email": "asdfghjk@gmail.com",
-      "password": "1234567890",
-      "conformPassword": "1234567890",
-      "cart": [
-        {
-          "id": 1,
-          "name": "Acoustic Guitar",
-          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-          "description": "Full-size acoustic guitar with warm sound.",
-          "price": 4500,
-          "isStock": true,
-          "brand": "Yamaha",
-          "color": "Natural"
-        },
-        {
-          "id": 2,
-          "name": "Electric Guitar",
-          "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
-          "description": "Solid body electric guitar for rock music.",
-          "price": 9000,
-          "isStock": false,
-          "brand": "Fender",
-          "color": "Black"
-        }
-      ],
+      "name": "vyshnav",
+      "email": "vyshnav@gmail.com",
+      "password": "1234",
+      "conformPassword": "1234",
+      "cart": [],
       "orders": [],
       "wishlist": [],
       "isBlock": false,
@@ -233,15 +212,6 @@
       "isStock": true,
       "brand": "Mani",
       "color": "Wood"
-    }
-  ],
-  "orders": [],
-  "carts": [
-    {
-      "id": "1",
-      "product": [
-        1
-      ]
     }
   ]
 }

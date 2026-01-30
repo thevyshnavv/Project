@@ -1,9 +1,21 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 const Header = () => {
 
-  const isLog = localStorage.getItem("username")
   const navigate = useNavigate()
+  const [isLog, setIsLog] = useState(false)
+
+  useEffect(() => {
+    const user = localStorage.getItem("userName");
+
+      setIsLog(user);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userName"); // session end
+    setIsLog(false);
+    navigate("/loginform");
+  };
 
   return (
     <header className="w-full px-6 py-4">
@@ -11,8 +23,8 @@ const Header = () => {
 
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg">
-            <span className="text-white font-bold text-lg">I</span>
+          <div className="flex items-center justify-center w-12 h-12 rounded-full  bg-gradient-to-br to-cyan-400 shadow-lg">
+            <img src="public/favIcon.jpg" alt="" className="text-white font-bold text-lg rounded-full" />
           </div>
           <span className="text-white font-semibold text-lg tracking-wide">
             Instrubay
@@ -33,21 +45,21 @@ const Header = () => {
           <a href="#" className="hover:text-white transition">
             About
           </a>
-          <a href="#" className="hover:text-white transition">
-            Cart
-          </a>
-          {isLog ? <div>
-            <button className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition">
+            <a href="/cart" className="hover:text-white transition">
+              Cart
+            </a>
+          {isLog ? (<div>
+            <button onClick={handleLogout} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition">
               Log out
             </button>
-          </div> : <div>
-            <button onClick={()=>navigate("/registerform")} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition mx-10">
+          </div>) : (<div>
+            <button onClick={() => navigate("/registerform")} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition mx-10">
               Sign Up
             </button>
-            <button onClick={()=>navigate("/loginform")} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition">
+            <button onClick={() => navigate("/loginform")} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition">
               Log In
             </button>
-          </div>}
+          </div>)}
         </div>
 
       </nav>

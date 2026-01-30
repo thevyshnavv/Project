@@ -9,15 +9,12 @@ function Cart() {
 
 
   useEffect(() => {
-    let user = localStorage.getItem("user")
+    let user = localStorage.getItem("userName")
     user = JSON.parse(user)
-    getCart(user.id)
+    console.log(user)
+    getCart(user?.id)
   }, [])
-  useEffect(() => {
-    console.log(state.cart,'from cart');
-
-  }, [state])
-
+  
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-2xl font-semibold mb-6">Your Cart</h1>

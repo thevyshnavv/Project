@@ -39,8 +39,7 @@ function LoginFrom() {
             //Login success
             alert("Login successful")
             //Save user data (basic session)
-            localStorage.setItem("user", JSON.stringify(user))
-
+            localStorage.setItem("userName", JSON.stringify(user))
             //Redicret
             window.location.href = '/'
         }
