@@ -1,6 +1,7 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../context/Cartcontext'
 
 function ProductDetails() {
   const { id } = useParams()
@@ -16,6 +17,9 @@ function ProductDetails() {
   if (!product) {
     return <div>Loading...</div>
   }
+
+  const {addItemCart} = useContext(CartContext)
+
   return (
   <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
     <div className="bg-white rounded-2xl shadow-xl max-w-4xl w-full flex flex-col md:flex-row overflow-hidden">
@@ -53,7 +57,7 @@ function ProductDetails() {
           <p className="text-red-500 font-medium">Out of Stock</p>
         )}
 
-        <button className="mt-4 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+        <button onClick={()=>addItemCart(product.id)} className="mt-4 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
           Add to Cart
         </button>
       </div>

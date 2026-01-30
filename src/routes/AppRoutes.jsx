@@ -9,6 +9,8 @@ import Footer from '../components/common/Footer';
 import Cart from '../pages/Cart';
 import ProductDetails from '../pages/ProductDetails';
 import CartProvider from '../context/Cartcontext';
+import WishList from '../pages/WishList';
+import Orders from '../pages/Orders';
 
 function AppRoutes() {
   return (
@@ -22,6 +24,8 @@ function AppRoutes() {
             <Route path='/registerform' element={<RegisterForm />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
+            <Route path='/wishlist/:id' element={<WishList />} />
+            <Route path='/orders/:id' element={<Orders />} />
           </Routes>
           <ToastContainer />
           <Footer />

@@ -87,7 +87,13 @@ function LoginFrom() {
                     onClick={handleLogin}
                     className="mt-4 py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-500 transition"
                 >
-                    Login
+                    Submmit Login
+                </button>
+                <button
+                    onClick={handleLogin}
+                    className="mt-4 py-2 rounded-md bg-red-600 text-white font-medium hover:bg-indigo-500 transition"
+                >
+                    Sign Up
                 </button>
             </div>
         </div>

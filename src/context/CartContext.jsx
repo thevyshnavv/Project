@@ -1,79 +1,93 @@
 import axios from 'axios'
-import React, { useReducer } from 'react'
-import { createContext } from 'react'
-
+import React, { useReducer, createContext } from 'react'
 
 const initialState = { cart: [] }
 
-
-const CartContext = createContext(undefined)
-
+const CartContext = createContext()
 
 const CART_ACTIONS = {
-    GET_MY_CART: "getMyCart",
-    DELETE_ITEM_CART: "deleteItemCart",
-    ADD_ITEM_CART:"addItemCart"
+  GET_MY_CART: "getMyCart",
 }
-
 
 const cartReducer = (state, action) => {
-    switch (action.type) {
-        case CART_ACTIONS.GET_MY_CART:
-            return { ...state, cart: action.payload }
-        case CART_ACTIONS.ADD_ITEM_CART:
-            return {...state, cart:action.payload }
-        default:
-            return state
-    }
-}
-const CartProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(cartReducer, initialState)
+  switch (action.type) {
+    case CART_ACTIONS.GET_MY_CART:
+      return { cart: action.payload }
 
+    case CART_ACTIONS.ADD_ITEM_CART:
+      return { cart: action.payload }
 
-    //this is the function for getcart
-    const getCart = async (userId) => {
-        const res = await axios.get(`http://localhost:3000/users/${userId}`)
-        
-        const user = res.data
-        dispatch({ type: CART_ACTIONS.GET_MY_CART, payload: user.cart })
-    }
+    case CART_ACTIONS.DELETE_ITEM_CART:
+      return { cart: action.payload }
 
-
-    //this is the function for delete items from the cart 
-    const addItemCart = async (productId) => {
-    try {
-      let user = JSON.parse(localStorage.getItem("userName"));
-      if (!user) return;
-
-      // get product
-      const productRes = await axios.get(`http://localhost:3000/products/${productId}`);
-      const product = productRes.data;
-
-      // get user
-      const userRes = await axios.get(`http://localhost:3000/users/${user.id}`);
-      const currentUser = userRes.data;
-
-      // check if already in cart
-      const exists = currentUser.cart.find(item => item.id === productId);
-      if (exists) return;
-
-      // add to cart
-      const updatedCart = [...currentUser.cart, product];
-
-      // update user cart
-      await axios.patch(`http://localhost:3000/users/${user.id}`, {
-        cart: updatedCart
-      })
-
-    } catch (err) {
-      console.error(err);
-    }
+    default:
+      return state
   }
-    const value = { state, getCart, addItemCart}
-    return <CartContext.Provider value={value}>
-        {children}
-    </CartContext.Provider>
 }
+
+const CartProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(cartReducer, initialState)
+
+  // get cart
+  const getCart = async (userId) => {
+    const res = await axios.get(`http://localhost:3000/users/${userId}`)
+    dispatch({
+      type: CART_ACTIONS.GET_MY_CART,
+      payload: res.data.cart
+    })
+  }
+
+  // add item to cart
+  const addItemCart = async (productId) => {
+    const user = JSON.parse(localStorage.getItem("userName"))
+    if (!user) return
+
+    const productRes = await axios.get(`http://localhost:3000/products/${productId}`)
+    const product = productRes.data
+
+    const userRes = await axios.get(`http://localhost:3000/users/${user.id}`)
+    const currentUser = userRes.data
+
+    const exists = currentUser.cart.find(item => item.id === productId)
+    if (exists) return
+
+    const updatedCart = [...currentUser.cart, product]
+
+    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+      cart: updatedCart
+    })
+
+    dispatch({
+      type: CART_ACTIONS.ADD_ITEM_CART,
+      payload: updatedCart
+    })
+  }
+
+  // remove item from cart
+  const removeItemCart = async (productId) => {
+    const user = JSON.parse(localStorage.getItem("userName"))
+    if (!user) return
+
+    const updatedCart = state.cart.filter(item => item.id !== productId)
+
+    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+      cart: updatedCart
+    })
+
+    dispatch({
+      type: CART_ACTIONS.DELETE_ITEM_CART,
+      payload: updatedCart
+    })
+  }
+
+  return (
+    <CartContext.Provider
+      value={{ state, getCart, addItemCart, removeItemCart }}
+    >
+      {children}
+    </CartContext.Provider>
+  )
+}
+
 export default CartProvider
 export { CartContext, CART_ACTIONS }
- 

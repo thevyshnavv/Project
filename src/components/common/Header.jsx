@@ -8,7 +8,7 @@ const Header = () => {
   useEffect(() => {
     const user = localStorage.getItem("userName");
 
-      setIsLog(user);
+    setIsLog(user);
   }, []);
 
   const handleLogout = () => {
@@ -19,16 +19,18 @@ const Header = () => {
 
   return (
     <header className="w-full px-6 py-4">
-      <nav className="flex items-center justify-between bg-[#10172a]/80 backdrop-blur-xl shadow-xl rounded-2xl px-6 py-4">
+      <nav className="flex items-center justify-between bg-[#10172a] shadow-md hover:shadow-lg backdrop-blur-xl shadow-xl rounded-2xl px-6 py-4">
 
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-12 h-12 rounded-full  bg-gradient-to-br to-cyan-400 shadow-lg">
             <img src="public/favIcon.jpg" alt="" className="text-white font-bold text-lg rounded-full" />
           </div>
+          <Link to="/">
           <span className="text-white font-semibold text-lg tracking-wide">
             Instrubay
           </span>
+          </Link>
         </div>
 
         {/* Center: Search */}
@@ -42,12 +44,16 @@ const Header = () => {
 
         {/* Right: Navigation + Auth */}
         <div className="flex items-center gap-6 text-gray-300 font-medium">
-          <a href="#" className="hover:text-white transition">
-            About
+          <a href="/orders" className="hover:text-white transition">
+            Orders
           </a>
-            <a href="/cart" className="hover:text-white transition">
-              Cart
-            </a>
+          <a href="/wishlist" className="hover:text-white transition">
+            Wish list
+          </a>
+          <a href="/cart" className="hover:text-white transition">
+            Cart
+          </a>
+
           {isLog ? (<div>
             <button onClick={handleLogout} className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md hover:opacity-90 transition">
               Log out

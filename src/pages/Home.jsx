@@ -15,17 +15,17 @@ function Home() {
 
 
   return (
-    <div className="flex flex-wrap gap-6 m-15">
-      {products.map((y) => (
-        <div key={y.id}>
+    <div className="flex flex-wrap gap-6 m-15 ">
+      {products.map((product) => (
+        <div key={product.id}>
           <div
             className="w-64 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
           >
               
-            <Link to={`/ProductDetails/${y.id}`}>
+            <Link to={`/ProductDetails/${product.id}`}>
             <div className="h-40 w-full overflow-hidden">
                 <img
-                  src={y.image}
+                  src={product.image}
                   alt="pic"
                   className="h-full w-full object-cover"
                 />
@@ -34,19 +34,31 @@ function Home() {
 
 
             <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-800 truncate">
-                {y.name}
+              <h2 className="text-lg font-semibold text-gray-500 truncate">
+                {product.name}
               </h2>
               <p className="mt-2 text-blue-600 font-medium">
-                {y.price}₹
+                {product.price}₹-only
               </p>
               <p className="mt-2 text-gray-600 font-medium">
-                {y.description}
+                {product.description}
               </p>
             </div>
-            <button onClick={() => addItemCart(y.id)} className='bg-black text-white px-2 m-2 rounded-full font-medium hover:bg-gray-800 transition duration-200 active:scale-95'>
-              Add Cart
-            </button>
+            <div className="flex gap-2 p-4 pt-0">
+          <button
+            onClick={() => addItemCart(product.id)}
+            className="flex-1 bg-black text-white text-sm font-semibold rounded-full hover:brightness-110 transition duration-200 active:scale-95"
+          >
+            Add to Cart
+          </button>
+
+          <button
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-pink-50 hover:text-pink-600 transition duration-200"
+            title="Add to Wishlist"
+          >
+            ❤
+          </button>
+        </div>
           </div>
 
         </div>
