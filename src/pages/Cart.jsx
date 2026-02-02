@@ -1,17 +1,18 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
-import { CartContext } from '../context/Cartcontext'
+import { CartContext } from '../context/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 
 function Cart() {
-  const { state, getCart, removeItemCart } = useContext(CartContext)
+  const { state, getCart, removeItemCart, delivery, subTotal, total } = useContext(CartContext)
+  const navigate = useNavigate()
 
 
 
   useEffect(() => {
     let user = localStorage.getItem("userName")
     user = JSON.parse(user)
-    console.log(user)
     getCart(user?.id)
   }, [])
   
@@ -80,13 +81,13 @@ function Cart() {
           <h2 className="text-xl font-semibold mb-4">Summary</h2>
 
           <div className="flex justify-between text-gray-700 mb-2">
-            <span>Subtotal (1 item)</span>
-            <span>₹20000</span>
+            <span>Subtotal ({state.cart.length} item)</span>
+            <span>{subTotal}</span>
           </div>
 
           <div className="flex justify-between text-gray-700 mb-2">
             <span>Delivery Charge</span>
-            <span>₹50</span>
+            <span>{delivery}</span>
           </div>
 
           <div className="flex justify-between text-gray-700 mb-2">
@@ -96,10 +97,10 @@ function Cart() {
 
           <div className="border-t mt-4 pt-4 flex justify-between font-bold text-lg">
             <span>Total</span>
-            <span>₹45678</span>
+            <span>{total}</span>
           </div>
 
-          <button className="w-full mt-6 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+          <button onClick={()=>navigate("/checkout")} className="w-full mt-6 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
             Checkout
           </button>
         </div>

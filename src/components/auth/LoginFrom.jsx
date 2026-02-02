@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import {useNavigate} from "react-router-dom" 
 
 function LoginFrom() {
+    const navigate = useNavigate()
 
     const [loginData, setLoginData] = useState({
         email: '',
@@ -90,8 +92,8 @@ function LoginFrom() {
                     Submmit Login
                 </button>
                 <button
-                    onClick={handleLogin}
-                    className="mt-4 py-2 rounded-md bg-red-600 text-white font-medium hover:bg-indigo-500 transition"
+                    onClick={()=>navigate("/registerform")}
+                    className="mt-4 py-2 rounded-md bg-green-400 text-white font-medium hover:bg-indigo-500 transition"
                 >
                     Sign Up
                 </button>

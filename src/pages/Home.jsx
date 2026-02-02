@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../context/Cartcontext'
-function Home() {
+import { CartContext } from '../context/CartContext'
+import { WishListContext } from '../context/WishListContext'
+function Home({search}) {
 
   const [products, setProducts] = useState([])
 
@@ -12,11 +13,19 @@ function Home() {
   }, [])
 
   const {addItemCart} = useContext(CartContext)
-
+  const {addItemWishList} = useContext(WishListContext)
 
   return (
     <div className="flex flex-wrap gap-6 m-15 ">
-      {products.map((product) => (
+      {products
+      .filter((pro)=>{const value=`${pro.name}${pro.brand}`
+      .toLowerCase() 
+      const word=search
+      .toLowerCase()
+      .trim()
+      .split(" ")
+    return word.every(word=>value.includes(word))})
+    .map((product) => (
         <div key={product.id}>
           <div
             className="w-64 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
@@ -53,6 +62,8 @@ function Home() {
           </button>
 
           <button
+          // -----------------------------------------------------
+          onClick={()=>addItemWishList(product.id)}
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-pink-50 hover:text-pink-600 transition duration-200"
             title="Add to Wishlist"
           >

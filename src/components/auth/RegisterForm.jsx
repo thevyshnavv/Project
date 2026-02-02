@@ -38,11 +38,9 @@ function RegisterForm() {
         window.location.href = "/loginform";
         setUser({ name: '', email: '', password: '', conformPassword: "" })
       })
-      // localStorage.setItem("username",res.data.email)
+      
       .catch((e) => {
         alert("Something went Wrong***")
-        console.log(e)
-        console.log(user);
       })
 
   }

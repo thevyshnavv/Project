@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-const Header = () => {
+const Header = ({search,setSearch}) => {
 
   const navigate = useNavigate()
   const [isLog, setIsLog] = useState(false)
@@ -10,6 +10,8 @@ const Header = () => {
 
     setIsLog(user);
   }, []);
+
+  
 
   const handleLogout = () => {
     localStorage.removeItem("userName"); // session end
@@ -37,7 +39,12 @@ const Header = () => {
         <div className="mx-6">
           <input
             type="text"
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
+            name='search'
             placeholder="Search instruments..."
+
+            // onKeyDownCapture={key==="Enter"}
             className="w-[360px] px-5 py-2 rounded-full bg-white/10 text-white placeholder-gray-400 shadow-inner focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
         </div>

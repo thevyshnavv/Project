@@ -1,24 +1,30 @@
 import axios from 'axios'
 import React, { useReducer, createContext } from 'react'
 
-const initialState = { cart: [] }
+const initialState = { cart: [], orders: [] }
 
 const CartContext = createContext()
 
 const CART_ACTIONS = {
   GET_MY_CART: "getMyCart",
+  REMOVE_ITEM_CART: "removeItemCart",
+  ADD_ITEM_CART: "addItemCart",
+  ADD_ITEM_ORDERS: "addOrderItem"
 }
 
-const cartReducer = (state, action) => {
+const Reducer = (state, action) => {
   switch (action.type) {
     case CART_ACTIONS.GET_MY_CART:
-      return { cart: action.payload }
+      return { ...state, cart: action.payload }
 
     case CART_ACTIONS.ADD_ITEM_CART:
-      return { cart: action.payload }
+      return { ...state, cart: action.payload }
 
-    case CART_ACTIONS.DELETE_ITEM_CART:
-      return { cart: action.payload }
+    case CART_ACTIONS.REMOVE_ITEM_CART:
+      return { ...state, cart: action.payload }
+
+    case CART_ACTIONS.ADD_ITEM_ORDERS:
+      return { ...state, orders: action.payload }
 
     default:
       return state
@@ -26,7 +32,7 @@ const cartReducer = (state, action) => {
 }
 
 const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, initialState)
+  const [state, dispatch] = useReducer(Reducer, initialState)
 
   // get cart
   const getCart = async (userId) => {
@@ -36,6 +42,51 @@ const CartProvider = ({ children }) => {
       payload: res.data.cart
     })
   }
+
+  //add item to order
+  const addItemOders = async () => {
+    const user = JSON.parse(localStorage.getItem("userName"))
+    if (!user) return
+
+    const userRes = await axios.get(`http://localhost:3000/users/${user.id}`)
+    const currentUser = userRes.data
+
+    if (currentUser.cart.length === 0) return
+
+    const newOrder = {
+      id: Date.now(),
+      items: currentUser.cart,
+      total: currentUser.cart.reduce((sum, item) => sum + item.price, 0),
+      date: new Date().toISOString(),
+      status: "Order placed"
+    }
+
+    const updateOrders = [...currentUser.orders, newOrder]
+
+    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+      orders: updateOrders,
+      cart: []
+    })
+
+    dispatch({
+      type: CART_ACTIONS.ADD_ITEM_ORDERS,
+      payload: updateOrders
+    })
+
+    dispatch({
+      type: CART_ACTIONS.GET_MY_CART,
+      payload: []
+    })
+  }
+  // get orders
+const getOrders = async (userId) => {
+  const res = await axios.get(`http://localhost:3000/users/${userId}`)
+  dispatch({
+    type: CART_ACTIONS.ADD_ITEM_ORDERS,
+    payload: res.data.orders
+  })
+}
+
 
   // add item to cart
   const addItemCart = async (productId) => {
@@ -63,6 +114,10 @@ const CartProvider = ({ children }) => {
     })
   }
 
+  const subTotal = state.cart.reduce((sum, item) => sum + item.price, 0)
+  const delivery = state.cart.length > 0 ? 40 : 0
+  const total = subTotal + delivery
+
   // remove item from cart
   const removeItemCart = async (productId) => {
     const user = JSON.parse(localStorage.getItem("userName"))
@@ -75,14 +130,24 @@ const CartProvider = ({ children }) => {
     })
 
     dispatch({
-      type: CART_ACTIONS.DELETE_ITEM_CART,
+      type: CART_ACTIONS.REMOVE_ITEM_CART,
       payload: updatedCart
     })
   }
 
   return (
     <CartContext.Provider
-      value={{ state, getCart, addItemCart, removeItemCart }}
+      value={{
+        state,
+        getCart,
+        addItemCart,
+        removeItemCart,
+        addItemOders,
+        getOrders,
+        subTotal,
+        delivery,
+        total
+      }}
     >
       {children}
     </CartContext.Provider>
