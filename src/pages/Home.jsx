@@ -42,9 +42,12 @@ function Home({search}) {
             </Link>
 
 
-            <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-500 truncate">
+            <div className="p-2">
+              <h2 className="text-lg font-bold text-black truncate">
                 {product.name}
+              </h2>
+              <h2 className="text-lg font-semibold text-gray-500 truncate">
+                {product.brand}
               </h2>
               <p className="mt-2 text-blue-600 font-medium">
                 {product.price}₹-only
@@ -62,7 +65,6 @@ function Home({search}) {
           </button>
 
           <button
-          // -----------------------------------------------------
           onClick={()=>addItemWishList(product.id)}
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-pink-50 hover:text-pink-600 transition duration-200"
             title="Add to Wishlist"

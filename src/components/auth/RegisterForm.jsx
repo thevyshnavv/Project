@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { toast } from 'react-toastify'
+// import { toast } from 'react-toastify'
+import toast from 'react-hot-toast'
+
 
 function RegisterForm() {
 
@@ -26,21 +28,23 @@ function RegisterForm() {
     e.preventDefault()
 
     if (user.password !== user.conformPassword) {
-      toast.error("password do not match", {
-        autoClose: 500,
-        position: "top-center"
+      toast.error("Password does not match", {
+        duration: 2000,
       })
       return;
     }
     axios.post("http://localhost:3000/users", user)
       .then((res) => {
         
+        toast.success("Registration succesful")
         window.location.href = "/loginform";
         setUser({ name: '', email: '', password: '', conformPassword: "" })
       })
-      
+
       .catch((e) => {
-        alert("Something went Wrong***")
+        toast.error("something went wrong", {
+          duration: 2000,
+        })
       })
 
   }

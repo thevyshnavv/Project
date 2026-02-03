@@ -1,6 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
 import Home from '../pages/Home';
 import LoginFrom from '../components/auth/LoginFrom';
 import RegisterForm from '../components/auth/RegisterForm';
@@ -14,6 +12,8 @@ import Orders from '../pages/Orders';
 import WishListProvider from '../context/WishListContext';
 import Checkout from '../pages/Checkout';
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast'
+
 
 function AppRoutes() {
   const [search, setSearch] = useState("");
@@ -22,7 +22,7 @@ function AppRoutes() {
       <CartProvider>
         <WishListProvider>
           <BrowserRouter>
-            <Header search={search} setSearch={setSearch}/>
+            <Header search={search} setSearch={setSearch} />
             <Routes>
               <Route path='/' element={<Home search={search} />} />
               <Route path='/loginform' element={<LoginFrom />} />
@@ -33,7 +33,7 @@ function AppRoutes() {
               <Route path='/orders' element={<Orders />} />
               <Route path='/checkout' element={<Checkout />} />
             </Routes>
-            <ToastContainer />
+            <Toaster position="top-center" />
             <Footer />
           </BrowserRouter>
         </WishListProvider>

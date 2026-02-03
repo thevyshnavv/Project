@@ -8,8 +8,46 @@
       "cart": [],
       "orders": [
         {
-          "id": 1769995982941,
+          "id": 1770022135947,
           "items": [
+            {
+              "id": 38,
+              "name": "Sound Mixer",
+              "image": "https://i.pinimg.com/736x/9a/5a/09/9a5a092e2756920e1e07ce65194dbc24.jpg",
+              "description": "Audio mixer for live sound.",
+              "price": 18500,
+              "isStock": true,
+              "brand": "Behringer",
+              "color": "Black"
+            }
+          ],
+          "total": 18500,
+          "date": "2026-02-02T08:48:55.947Z",
+          "status": "Order placed"
+        },
+        {
+          "id": 1770027778576,
+          "items": [
+            {
+              "id": 2,
+              "name": "Electric Guitar",
+              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+              "description": "Solid body electric guitar for rock music.",
+              "price": 9000,
+              "isStock": false,
+              "brand": "Fender",
+              "color": "Black"
+            },
+            {
+              "id": 1,
+              "name": "Acoustic Guitar",
+              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+              "description": "Full-size acoustic guitar with warm sound.",
+              "price": 4500,
+              "isStock": true,
+              "brand": "Yamaha",
+              "color": "Natural"
+            },
             {
               "id": 4,
               "name": "Classical Guitar",
@@ -21,14 +59,14 @@
               "color": "Brown"
             },
             {
-              "id": 5,
-              "name": "Digital Keyboard",
-              "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
-              "description": "61-key keyboard with multiple sounds.",
-              "price": 12000,
+              "id": 8,
+              "name": "Electronic Drum Pad",
+              "image": "https://i.pinimg.com/736x/28/29/5b/28295bfc6e405e628b55cacd7c88ee82.jpg",
+              "description": "Portable electronic drum pad.",
+              "price": 11000,
               "isStock": true,
-              "brand": "Casio",
-              "color": "White"
+              "brand": "Roland",
+              "color": "Black"
             },
             {
               "id": 3,
@@ -41,50 +79,22 @@
               "color": "Blue"
             }
           ],
-          "total": 25500,
-          "date": "2026-02-02T01:33:02.941Z",
+          "total": 38000,
+          "date": "2026-02-02T10:22:58.576Z",
           "status": "Order placed"
         },
         {
-          "id": 1769996135287,
+          "id": 1770030472704,
           "items": [
             {
-              "id": 3,
-              "name": "Bass Guitar",
-              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-              "description": "4-string bass guitar with deep tone.",
-              "price": 8500,
-              "isStock": false,
-              "brand": "Ibanez",
-              "color": "Blue"
-            }
-          ],
-          "total": 8500,
-          "date": "2026-02-02T01:35:35.287Z",
-          "status": "Order placed"
-        },
-        {
-          "id": 1769996336400,
-          "items": [
-            {
-              "id": 4,
-              "name": "Classical Guitar",
-              "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-              "description": "Nylon-string guitar for classical music.",
-              "price": 5000,
+              "id": 1,
+              "name": "Acoustic Guitar",
+              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+              "description": "Full-size acoustic guitar with warm sound.",
+              "price": 4500,
               "isStock": true,
-              "brand": "Juarez",
-              "color": "Brown"
-            },
-            {
-              "id": 3,
-              "name": "Bass Guitar",
-              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-              "description": "4-string bass guitar with deep tone.",
-              "price": 8500,
-              "isStock": false,
-              "brand": "Ibanez",
-              "color": "Blue"
+              "brand": "Yamaha",
+              "color": "Natural"
             },
             {
               "id": 2,
@@ -97,51 +107,81 @@
               "color": "Black"
             },
             {
-              "id": 5,
-              "name": "Digital Keyboard",
-              "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
-              "description": "61-key keyboard with multiple sounds.",
-              "price": 12000,
+              "id": 3,
+              "name": "Bass Guitar",
+              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+              "description": "4-string bass guitar with deep tone.",
+              "price": 8500,
+              "isStock": false,
+              "brand": "Ibanez",
+              "color": "Blue"
+            },
+            {
+              "id": 4,
+              "name": "Classical Guitar",
+              "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+              "description": "Nylon-string guitar for classical music.",
+              "price": 5000,
               "isStock": true,
-              "brand": "Casio",
-              "color": "White"
+              "brand": "Juarez",
+              "color": "Brown"
+            },
+            {
+              "id": 9,
+              "name": "Violin",
+              "image": "https://i.pinimg.com/736x/d9/5a/00/d95a00a8cf747933cda6d9652302fb14.jpg",
+              "description": "Classical violin for beginners.",
+              "price": 6000,
+              "isStock": true,
+              "brand": "Stentor",
+              "color": "Brown"
+            },
+            {
+              "id": 8,
+              "name": "Electronic Drum Pad",
+              "image": "https://i.pinimg.com/736x/28/29/5b/28295bfc6e405e628b55cacd7c88ee82.jpg",
+              "description": "Portable electronic drum pad.",
+              "price": 11000,
+              "isStock": true,
+              "brand": "Roland",
+              "color": "Black"
             }
           ],
-          "total": 34500,
-          "date": "2026-02-02T01:38:56.400Z",
+          "total": 44000,
+          "date": "2026-02-02T11:07:52.704Z",
           "status": "Order placed"
         }
       ],
       "wishlist": [
         {
-          "id": 3,
-          "name": "Bass Guitar",
-          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-          "description": "4-string bass guitar with deep tone.",
-          "price": 8500,
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
           "isStock": false,
-          "brand": "Ibanez",
-          "color": "Blue"
+          "brand": "Fender",
+          "color": "Black"
         },
         {
-          "id": 4,
-          "name": "Classical Guitar",
-          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-          "description": "Nylon-string guitar for classical music.",
-          "price": 5000,
+          "id": 1,
+          "name": "Acoustic Guitar",
+          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+          "description": "Full-size acoustic guitar with warm sound.",
+          "price": 4500,
           "isStock": true,
-          "brand": "Juarez",
-          "color": "Brown"
+          "brand": "Yamaha",
+          "color": "Natural"
         },
         {
-          "id": 5,
-          "name": "Digital Keyboard",
-          "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
-          "description": "61-key keyboard with multiple sounds.",
-          "price": 12000,
-          "isStock": true,
-          "brand": "Casio",
-          "color": "White"
+          "id": 6,
+          "name": "Grand Piano",
+          "image": "https://i.pinimg.com/1200x/fe/72/c6/fe72c6f31db7b78c918e986f6e17a13a.jpg",
+          "description": "Professional grand piano.",
+          "price": 250000,
+          "isStock": false,
+          "brand": "Steinway",
+          "color": "Black"
         }
       ],
       "isBlock": false,

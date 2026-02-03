@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useReducer, createContext } from 'react'
+import toast from 'react-hot-toast'
 
 const initialState = { cart: [], orders: [] }
 
@@ -67,7 +68,7 @@ const CartProvider = ({ children }) => {
       orders: updateOrders,
       cart: []
     })
-
+    
     dispatch({
       type: CART_ACTIONS.ADD_ITEM_ORDERS,
       payload: updateOrders
@@ -77,6 +78,7 @@ const CartProvider = ({ children }) => {
       type: CART_ACTIONS.GET_MY_CART,
       payload: []
     })
+    toast.success("Order placed successfully")
   }
   // get orders
 const getOrders = async (userId) => {
@@ -112,6 +114,7 @@ const getOrders = async (userId) => {
       type: CART_ACTIONS.ADD_ITEM_CART,
       payload: updatedCart
     })
+    toast.success('Item added to cart!')
   }
 
   const subTotal = state.cart.reduce((sum, item) => sum + item.price, 0)
@@ -133,6 +136,7 @@ const getOrders = async (userId) => {
       type: CART_ACTIONS.REMOVE_ITEM_CART,
       payload: updatedCart
     })
+    toast.success('Item removed from cart!')
   }
 
   return (
