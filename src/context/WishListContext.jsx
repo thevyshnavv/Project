@@ -12,21 +12,22 @@ const WISH_LIST_ACTIONS = {
 }
 
 const wishlistReducer = (state, action) => {
-    switch (action.type) {
+  switch (action.type) {
 
-        case WISH_LIST_ACTIONS.GET_ITEM_WISH_LIST:
-            return { wishlist: action.payload }
+    case WISH_LIST_ACTIONS.GET_ITEM_WISH_LIST:
+      return { wishlist: action.payload || [] }
 
-        case WISH_LIST_ACTIONS.REMOVE_ITEM_WISH_LIST:
-            return { wishlist: action.payload }
+    case WISH_LIST_ACTIONS.ADD_ITEM_WISH_LIST:
+      return { wishlist: action.payload || [] }
 
-        case WISH_LIST_ACTIONS.ADD_ITEM_WISH_LIST:
-            return { wishlist: action.payload }
+    case WISH_LIST_ACTIONS.REMOVE_ITEM_WISH_LIST:
+      return { wishlist: action.payload || [] }
 
-        default:
-            return state
-    }
+    default:
+      return state
+  }
 }
+
 
 const WishListProvider = ({ children }) => {
     const [state, dispatch] = useReducer(wishlistReducer, initialState)

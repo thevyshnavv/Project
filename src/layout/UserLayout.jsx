@@ -4,11 +4,20 @@ import Footer from "../components/common/Footer";
 
 function UserLayout({ search, setSearch }) {
   return (
-    <>
-      <Header search={search} setSearch={setSearch} />
-      <Outlet />
+    <div>
+      
+      {/* Sticky Header */}
+      <div className="sticky top-0 z-50">
+        <Header search={search} setSearch={setSearch} />
+      </div>
+
+      {/* Page Content */}
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

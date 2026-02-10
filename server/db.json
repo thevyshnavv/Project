@@ -49,6 +49,17 @@
           "brand": "Juarez",
           "color": "Brown",
           "category": "string"
+        },
+        {
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
+          "isStock": false,
+          "brand": "Fender",
+          "color": "Black",
+          "category": "string"
         }
       ],
       "orders": [
@@ -178,14 +189,25 @@
       ],
       "wishlist": [
         {
-          "id": 4,
-          "name": "Classical Guitar",
-          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-          "description": "Nylon-string guitar for classical music.",
-          "price": 5000,
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
+          "isStock": false,
+          "brand": "Fender",
+          "color": "Black",
+          "category": "string"
+        },
+        {
+          "id": 1,
+          "name": "Acoustic Guitar",
+          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+          "description": "Full-size acoustic guitar with warm sound",
+          "price": "9000",
           "isStock": true,
-          "brand": "Juarez",
-          "color": "Brown",
+          "brand": "Yamaha",
+          "color": "Natural",
           "category": "string"
         },
         {
@@ -200,14 +222,14 @@
           "category": "string"
         },
         {
-          "id": 2,
-          "name": "Electric Guitar",
-          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
-          "description": "Solid body electric guitar for rock music.",
-          "price": 9000,
-          "isStock": false,
-          "brand": "Fender",
-          "color": "Black",
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
           "category": "string"
         }
       ],
@@ -245,6 +267,190 @@
       "wishlist": [],
       "isBlock": false,
       "id": 101
+    },
+    {
+      "name": "poochandi",
+      "email": "poocha@gmail.com",
+      "password": "12345",
+      "conformPassword": "12345",
+      "role": "user",
+      "cart": [],
+      "orders": [
+        {
+          "id": 1770714363396,
+          "items": [
+            {
+              "id": 5,
+              "name": "Digital Keyboard",
+              "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
+              "description": "61-key keyboard with multiple sounds.",
+              "price": 12000,
+              "isStock": true,
+              "brand": "Casio",
+              "color": "White",
+              "category": "keyboard"
+            },
+            {
+              "id": 6,
+              "name": "Grand Piano",
+              "image": "https://i.pinimg.com/1200x/fe/72/c6/fe72c6f31db7b78c918e986f6e17a13a.jpg",
+              "description": "Professional grand piano.",
+              "price": 250000,
+              "isStock": false,
+              "brand": "Steinway",
+              "color": "Black",
+              "category": "keyboard"
+            }
+          ],
+          "total": 262000,
+          "date": "2026-02-10T09:06:03.396Z",
+          "status": "Order placed"
+        },
+        {
+          "id": 1770714690852,
+          "items": [
+            {
+              "id": 22,
+              "name": "Cajon",
+              "image": "https://i.pinimg.com/736x/65/55/ec/6555ec0c1b48a1da7631327d1a6ab752.jpg",
+              "description": "Box percussion instrument.",
+              "price": 6200,
+              "isStock": true,
+              "brand": "Meinl",
+              "color": "Wood",
+              "category": "percussion"
+            },
+            {
+              "id": 17,
+              "name": "Harmonium",
+              "image": "https://i.pinimg.com/1200x/55/cf/01/55cf01af340cf4dc9dc205eeddbf04d5.jpg",
+              "description": "Hand-pumped harmonium.",
+              "price": 9500,
+              "isStock": false,
+              "brand": "Bina",
+              "color": "Brown",
+              "category": "keyboard"
+            },
+            {
+              "id": 18,
+              "name": "Sitar",
+              "image": "https://i.pinimg.com/736x/50/8f/47/508f470ea02c05e730714adc1d869769.jpg",
+              "description": "Classical Indian sitar.",
+              "price": 22000,
+              "isStock": true,
+              "brand": "Rikhi Ram",
+              "color": "Natural",
+              "category": "string"
+            },
+            {
+              "id": 19,
+              "name": "Veena",
+              "image": "https://i.pinimg.com/736x/a1/56/22/a156223b26e3b1b132886e4eec854eaa.jpg",
+              "description": "Traditional veena instrument.",
+              "price": 30000,
+              "isStock": false,
+              "brand": "Gopal",
+              "color": "Brown",
+              "category": "string"
+            }
+          ],
+          "total": 67700,
+          "date": "2026-02-10T09:11:30.852Z",
+          "status": "Order placed"
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 1,
+          "name": "Acoustic Guitar",
+          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+          "description": "Full-size acoustic guitar with warm sound",
+          "price": "9000",
+          "isStock": true,
+          "brand": "Yamaha",
+          "color": "Natural",
+          "category": "string"
+        },
+        {
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
+          "isStock": false,
+          "brand": "Fender",
+          "color": "Black",
+          "category": "string"
+        },
+        {
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
+          "isStock": false,
+          "brand": "Ibanez",
+          "color": "Blue",
+          "category": "string"
+        },
+        {
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 5,
+          "name": "Digital Keyboard",
+          "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
+          "description": "61-key keyboard with multiple sounds.",
+          "price": 12000,
+          "isStock": true,
+          "brand": "Casio",
+          "color": "White",
+          "category": "keyboard"
+        },
+        {
+          "id": 10,
+          "name": "Electric Violin",
+          "image": "https://i.pinimg.com/1200x/1f/d8/75/1fd8756ee561d3c00605f592aef44d7d.jpg",
+          "description": "Modern electric violin.",
+          "price": 14000,
+          "isStock": false,
+          "brand": "Yamaha",
+          "color": "Black",
+          "category": "string"
+        },
+        {
+          "id": 46,
+          "name": "Recorder",
+          "image": "https://i.pinimg.com/1200x/07/44/d1/0744d1c89b45c480ec0f226becd3b73b.jpg",
+          "description": "Beginner recorder flute.",
+          "price": 650,
+          "isStock": true,
+          "brand": "Yamaha",
+          "color": "White",
+          "category": "string"
+        },
+        {
+          "id": 47,
+          "name": "Banjo",
+          "image": "https://i.pinimg.com/736x/11/9f/13/119f13f9afe73adfb8fccb9b10e44a05.jpg",
+          "description": "5-string banjo instrument.",
+          "price": 13500,
+          "isStock": false,
+          "brand": "Rogue",
+          "color": "Brown",
+          "category": "string"
+        }
+      ],
+      "isBlock": false,
+      "id": 102
     }
   ],
   "products": [

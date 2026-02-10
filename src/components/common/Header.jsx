@@ -21,12 +21,12 @@ const Header = ({search,setSearch}) => {
 
   return (
     <header className="w-full px-6 py-4">
-      <nav className="flex items-center justify-between bg-[#10172a] shadow-md hover:shadow-lg backdrop-blur-xl shadow-xl rounded-2xl px-6 py-4">
+      <nav className="flex items-center justify-between bg-[#10172a] shadow-md hover:shadow-lg backdrop-blur-xl shadow-xl rounded-full px-6 py-4">
 
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-12 h-12 rounded-full  bg-gradient-to-br to-cyan-400 shadow-lg">
-            <img src="public/favIcon.jpg" alt="logo" className="text-white font-bold text-lg rounded-full" />
+            <img src="https://i.pinimg.com/736x/d1/b8/f4/d1b8f44b6d4e8486bb233dd680900ee3.jpg" alt="logo" className="text-white font-bold text-lg rounded-full" />
           </div>
           <Link to="/">
           <span className="text-white font-semibold text-lg tracking-wide">
@@ -51,14 +51,14 @@ const Header = ({search,setSearch}) => {
 
         {/* Right: Navigation + Auth */}
         <div className="flex items-center gap-6 text-gray-300 font-medium">
-          <a href="/orders" className="hover:text-white transition">
-            Orders
-          </a>
           <a href="/wishlist" className="hover:text-white transition">
-            Wish list
+            <i className="fa-solid fa-hand-holding-heart fa-beat text-2xl"></i>
           </a>
           <a href="/cart" className="hover:text-white transition">
-            Cart
+            <i className="fa-brands fa-opencart fa-bounce text-2xl"></i>
+          </a>
+          <a href="/orders" className="hover:text-white transition">
+            Orders
           </a>
 
           {isLog ? (<div>
