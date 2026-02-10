@@ -34,16 +34,23 @@ function LoginFrom() {
                 return
             }
             //optional block check
-            if (user.isBock) {
+            if (user.isBlock) {
                 alert("User is blocked")
                 return
             }
             //Login success
             alert("Login successful")
             //Save user data (basic session)
-            localStorage.setItem("userName", JSON.stringify(user))
+      localStorage.setItem("userName", JSON.stringify(user))
+
+ 
+
             //Redicret
-            window.location.href = '/'
+            if(user.role==="admin"){
+                  navigate("/admin");
+            }else{
+                  navigate("/");
+            }
         }
         catch (error) {
             console.log(error)
@@ -64,7 +71,7 @@ function LoginFrom() {
                 <div className="flex flex-col">
                     <label className="text-sm text-gray-300 mb-1">Email</label>
                     <input
-                        type="text"
+                        type="email"
                         onChange={handleChange}
                         value={loginData.email}
                         name='email'
@@ -85,7 +92,7 @@ function LoginFrom() {
                     />
                 </div>
 
-                <button
+                <button type='button'
                     onClick={handleLogin}
                     className="mt-4 py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-500 transition"
                 >

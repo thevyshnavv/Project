@@ -4,12 +4,131 @@
       "name": "vyshnav",
       "email": "vyshnav@gmail.com",
       "password": "1234",
-      "conformPassword": "1234",
-      "cart": [],
+      "role": "user",
+      "cart": [
+        {
+          "id": 7,
+          "name": "Drum Set",
+          "image": "https://i.pinimg.com/736x/b5/f1/21/b5f1216d4d2a28fc0c354ac73fda7e10.jpg",
+          "description": "5-piece drum kit for live performance.",
+          "price": 24000,
+          "isStock": true,
+          "brand": "Pearl",
+          "color": "Red",
+          "category": "percussion"
+        },
+        {
+          "id": 9,
+          "name": "Violin",
+          "image": "https://i.pinimg.com/736x/d9/5a/00/d95a00a8cf747933cda6d9652302fb14.jpg",
+          "description": "Classical violin for beginners.",
+          "price": 6000,
+          "isStock": true,
+          "brand": "Stentor",
+          "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 22,
+          "name": "Cajon",
+          "image": "https://i.pinimg.com/736x/65/55/ec/6555ec0c1b48a1da7631327d1a6ab752.jpg",
+          "description": "Box percussion instrument.",
+          "price": 6200,
+          "isStock": true,
+          "brand": "Meinl",
+          "color": "Wood",
+          "category": "percussion"
+        },
+        {
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
+          "category": "string"
+        }
+      ],
       "orders": [
         {
-          "id": 1770022135947,
+          "id": 1770375462370,
           "items": [
+            {
+              "id": 1,
+              "name": "Acoustic Guitar",
+              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+              "description": "Full-size acoustic guitar with warm sound.",
+              "price": 4500,
+              "isStock": true,
+              "brand": "Yamaha",
+              "color": "Natural",
+              "category": "string"
+            },
+            {
+              "id": 2,
+              "name": "Electric Guitar",
+              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+              "description": "Solid body electric guitar for rock music.",
+              "price": 9000,
+              "isStock": false,
+              "brand": "Fender",
+              "color": "Black",
+              "category": "string"
+            },
+            {
+              "id": 3,
+              "name": "Bass Guitar",
+              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+              "description": "4-string bass guitar with deep tone.",
+              "price": 8500,
+              "isStock": false,
+              "brand": "Ibanez",
+              "color": "Blue",
+              "category": "string"
+            }
+          ],
+          "total": 22000,
+          "date": "2026-02-06T10:57:42.370Z",
+          "status": "Order placed"
+        },
+        {
+          "id": 1770375486798,
+          "items": [
+            {
+              "id": 41,
+              "name": "Guitar Pedal",
+              "image": "https://i.pinimg.com/1200x/b6/29/10/b629104fb73ffcd96e44f65bfc9d0c9b.jpg",
+              "description": "Distortion guitar effects pedal.",
+              "price": 3600,
+              "isStock": true,
+              "brand": "Boss",
+              "color": "Orange",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 49,
+              "name": "Music Tuner",
+              "image": "https://i.pinimg.com/736x/6e/90/e6/6e90e61a1af4e4eea9c429875ff95668.jpg",
+              "description": "Digital tuner for instruments.",
+              "price": 850,
+              "isStock": true,
+              "brand": "Korg",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 50,
+              "name": "Stage Light",
+              "image": "https://i.pinimg.com/1200x/ea/f8/62/eaf86249e863c462da5c468c597b9c42.jpg",
+              "description": "LED stage lighting system.",
+              "price": 14500,
+              "isStock": true,
+              "brand": "Chauvet",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
             {
               "id": 38,
               "name": "Sound Mixer",
@@ -18,141 +137,68 @@
               "price": 18500,
               "isStock": true,
               "brand": "Behringer",
-              "color": "Black"
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 37,
+              "name": "Keyboard Bench",
+              "image": "https://i.pinimg.com/736x/03/2b/e8/032be8ae78f65f7b2619add539832b8e.jpg",
+              "description": "Adjustable piano bench.",
+              "price": 4200,
+              "isStock": false,
+              "brand": "Roland",
+              "color": "Black",
+              "category": "keyboard"
             }
           ],
-          "total": 18500,
-          "date": "2026-02-02T08:48:55.947Z",
+          "total": 41650,
+          "date": "2026-02-06T10:58:06.798Z",
           "status": "Order placed"
         },
         {
-          "id": 1770027778576,
+          "id": 1770375498788,
           "items": [
             {
-              "id": 2,
-              "name": "Electric Guitar",
-              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
-              "description": "Solid body electric guitar for rock music.",
-              "price": 9000,
-              "isStock": false,
-              "brand": "Fender",
-              "color": "Black"
-            },
-            {
-              "id": 1,
-              "name": "Acoustic Guitar",
-              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-              "description": "Full-size acoustic guitar with warm sound.",
-              "price": 4500,
+              "id": 16,
+              "name": "Tabla",
+              "image": "https://i.pinimg.com/736x/b2/d4/0f/b2d40f10cd792f0bffd1f66fad76cc8b.jpg",
+              "description": "Traditional Indian tabla set.",
+              "price": 5500,
               "isStock": true,
-              "brand": "Yamaha",
-              "color": "Natural"
-            },
-            {
-              "id": 4,
-              "name": "Classical Guitar",
-              "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-              "description": "Nylon-string guitar for classical music.",
-              "price": 5000,
-              "isStock": true,
-              "brand": "Juarez",
-              "color": "Brown"
-            },
-            {
-              "id": 8,
-              "name": "Electronic Drum Pad",
-              "image": "https://i.pinimg.com/736x/28/29/5b/28295bfc6e405e628b55cacd7c88ee82.jpg",
-              "description": "Portable electronic drum pad.",
-              "price": 11000,
-              "isStock": true,
-              "brand": "Roland",
-              "color": "Black"
-            },
-            {
-              "id": 3,
-              "name": "Bass Guitar",
-              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-              "description": "4-string bass guitar with deep tone.",
-              "price": 8500,
-              "isStock": false,
-              "brand": "Ibanez",
-              "color": "Blue"
+              "brand": "SG Musical",
+              "color": "Wood",
+              "category": "percussion"
             }
           ],
-          "total": 38000,
-          "date": "2026-02-02T10:22:58.576Z",
-          "status": "Order placed"
-        },
-        {
-          "id": 1770030472704,
-          "items": [
-            {
-              "id": 1,
-              "name": "Acoustic Guitar",
-              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-              "description": "Full-size acoustic guitar with warm sound.",
-              "price": 4500,
-              "isStock": true,
-              "brand": "Yamaha",
-              "color": "Natural"
-            },
-            {
-              "id": 2,
-              "name": "Electric Guitar",
-              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
-              "description": "Solid body electric guitar for rock music.",
-              "price": 9000,
-              "isStock": false,
-              "brand": "Fender",
-              "color": "Black"
-            },
-            {
-              "id": 3,
-              "name": "Bass Guitar",
-              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-              "description": "4-string bass guitar with deep tone.",
-              "price": 8500,
-              "isStock": false,
-              "brand": "Ibanez",
-              "color": "Blue"
-            },
-            {
-              "id": 4,
-              "name": "Classical Guitar",
-              "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-              "description": "Nylon-string guitar for classical music.",
-              "price": 5000,
-              "isStock": true,
-              "brand": "Juarez",
-              "color": "Brown"
-            },
-            {
-              "id": 9,
-              "name": "Violin",
-              "image": "https://i.pinimg.com/736x/d9/5a/00/d95a00a8cf747933cda6d9652302fb14.jpg",
-              "description": "Classical violin for beginners.",
-              "price": 6000,
-              "isStock": true,
-              "brand": "Stentor",
-              "color": "Brown"
-            },
-            {
-              "id": 8,
-              "name": "Electronic Drum Pad",
-              "image": "https://i.pinimg.com/736x/28/29/5b/28295bfc6e405e628b55cacd7c88ee82.jpg",
-              "description": "Portable electronic drum pad.",
-              "price": 11000,
-              "isStock": true,
-              "brand": "Roland",
-              "color": "Black"
-            }
-          ],
-          "total": 44000,
-          "date": "2026-02-02T11:07:52.704Z",
+          "total": 5500,
+          "date": "2026-02-06T10:58:18.788Z",
           "status": "Order placed"
         }
       ],
       "wishlist": [
+        {
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
+          "isStock": false,
+          "brand": "Ibanez",
+          "color": "Blue",
+          "category": "string"
+        },
         {
           "id": 2,
           "name": "Electric Guitar",
@@ -161,31 +207,44 @@
           "price": 9000,
           "isStock": false,
           "brand": "Fender",
-          "color": "Black"
-        },
-        {
-          "id": 1,
-          "name": "Acoustic Guitar",
-          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-          "description": "Full-size acoustic guitar with warm sound.",
-          "price": 4500,
-          "isStock": true,
-          "brand": "Yamaha",
-          "color": "Natural"
-        },
-        {
-          "id": 6,
-          "name": "Grand Piano",
-          "image": "https://i.pinimg.com/1200x/fe/72/c6/fe72c6f31db7b78c918e986f6e17a13a.jpg",
-          "description": "Professional grand piano.",
-          "price": 250000,
-          "isStock": false,
-          "brand": "Steinway",
-          "color": "Black"
+          "color": "Black",
+          "category": "string"
         }
       ],
       "isBlock": false,
       "id": 1
+    },
+    {
+      "id": 99,
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin",
+      "isBlock": false
+    },
+    {
+      "name": "sayipp",
+      "email": "sayipp@gmail.com",
+      "password": "sayipp123",
+      "conformPassword": "sayipp123",
+      "role": "user",
+      "cart": [],
+      "orders": [],
+      "wishlist": [],
+      "isBlock": true,
+      "id": 100
+    },
+    {
+      "name": "mathamma",
+      "email": "mathu@gmail.com",
+      "password": "mathu123",
+      "conformPassword": "mathu123",
+      "role": "user",
+      "cart": [],
+      "orders": [],
+      "wishlist": [],
+      "isBlock": false,
+      "id": 101
     }
   ],
   "products": [
@@ -193,11 +252,12 @@
       "id": 1,
       "name": "Acoustic Guitar",
       "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-      "description": "Full-size acoustic guitar with warm sound.",
-      "price": 4500,
+      "description": "Full-size acoustic guitar with warm sound",
+      "price": "9000",
       "isStock": true,
       "brand": "Yamaha",
-      "color": "Natural"
+      "color": "Natural",
+      "category": "string"
     },
     {
       "id": 2,
@@ -207,7 +267,8 @@
       "price": 9000,
       "isStock": false,
       "brand": "Fender",
-      "color": "Black"
+      "color": "Black",
+      "category": "string"
     },
     {
       "id": 3,
@@ -217,7 +278,8 @@
       "price": 8500,
       "isStock": false,
       "brand": "Ibanez",
-      "color": "Blue"
+      "color": "Blue",
+      "category": "string"
     },
     {
       "id": 4,
@@ -227,7 +289,8 @@
       "price": 5000,
       "isStock": true,
       "brand": "Juarez",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "string"
     },
     {
       "id": 5,
@@ -237,7 +300,8 @@
       "price": 12000,
       "isStock": true,
       "brand": "Casio",
-      "color": "White"
+      "color": "White",
+      "category": "keyboard"
     },
     {
       "id": 6,
@@ -247,7 +311,8 @@
       "price": 250000,
       "isStock": false,
       "brand": "Steinway",
-      "color": "Black"
+      "color": "Black",
+      "category": "keyboard"
     },
     {
       "id": 7,
@@ -257,7 +322,8 @@
       "price": 24000,
       "isStock": true,
       "brand": "Pearl",
-      "color": "Red"
+      "color": "Red",
+      "category": "percussion"
     },
     {
       "id": 8,
@@ -267,7 +333,8 @@
       "price": 11000,
       "isStock": true,
       "brand": "Roland",
-      "color": "Black"
+      "color": "Black",
+      "category": "percussion"
     },
     {
       "id": 9,
@@ -277,7 +344,8 @@
       "price": 6000,
       "isStock": true,
       "brand": "Stentor",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "string"
     },
     {
       "id": 10,
@@ -287,7 +355,8 @@
       "price": 14000,
       "isStock": false,
       "brand": "Yamaha",
-      "color": "Black"
+      "color": "Black",
+      "category": "string"
     },
     {
       "id": 11,
@@ -297,7 +366,8 @@
       "price": 3200,
       "isStock": true,
       "brand": "Yamaha",
-      "color": "Silver"
+      "color": "Silver",
+      "category": "string"
     },
     {
       "id": 12,
@@ -307,7 +377,8 @@
       "price": 7000,
       "isStock": true,
       "brand": "Buffet",
-      "color": "Black"
+      "color": "Black",
+      "category": "string"
     },
     {
       "id": 13,
@@ -317,7 +388,8 @@
       "price": 18000,
       "isStock": false,
       "brand": "Selmer",
-      "color": "Golden"
+      "color": "Golden",
+      "category": "string"
     },
     {
       "id": 14,
@@ -327,7 +399,8 @@
       "price": 6500,
       "isStock": true,
       "brand": "Bach",
-      "color": "Gold"
+      "color": "Gold",
+      "category": "string"
     },
     {
       "id": 15,
@@ -337,7 +410,8 @@
       "price": 9000,
       "isStock": true,
       "brand": "Conn",
-      "color": "Brass"
+      "color": "Brass",
+      "category": "string"
     },
     {
       "id": 16,
@@ -347,7 +421,8 @@
       "price": 5500,
       "isStock": true,
       "brand": "SG Musical",
-      "color": "Wood"
+      "color": "Wood",
+      "category": "percussion"
     },
     {
       "id": 17,
@@ -357,7 +432,8 @@
       "price": 9500,
       "isStock": false,
       "brand": "Bina",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "keyboard"
     },
     {
       "id": 18,
@@ -367,7 +443,8 @@
       "price": 22000,
       "isStock": true,
       "brand": "Rikhi Ram",
-      "color": "Natural"
+      "color": "Natural",
+      "category": "string"
     },
     {
       "id": 19,
@@ -377,7 +454,8 @@
       "price": 30000,
       "isStock": false,
       "brand": "Gopal",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "string"
     },
     {
       "id": 20,
@@ -387,7 +465,8 @@
       "price": 8000,
       "isStock": true,
       "brand": "Mani",
-      "color": "Wood"
+      "color": "Wood",
+      "category": "percussion"
     },
     {
       "id": 21,
@@ -397,7 +476,8 @@
       "price": 2800,
       "isStock": true,
       "brand": "Kala",
-      "color": "Natural"
+      "color": "Natural",
+      "category": "string"
     },
     {
       "id": 22,
@@ -407,7 +487,8 @@
       "price": 6200,
       "isStock": true,
       "brand": "Meinl",
-      "color": "Wood"
+      "color": "Wood",
+      "category": "percussion"
     },
     {
       "id": 23,
@@ -417,7 +498,8 @@
       "price": 7500,
       "isStock": true,
       "brand": "Blue",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 24,
@@ -427,7 +509,8 @@
       "price": 9800,
       "isStock": true,
       "brand": "Focusrite",
-      "color": "Red"
+      "color": "Red",
+      "category": "audio_accessory"
     },
     {
       "id": 25,
@@ -437,7 +520,8 @@
       "price": 6500,
       "isStock": false,
       "brand": "Akai",
-      "color": "Black"
+      "color": "Black",
+      "category": "keyboard"
     },
     {
       "id": 26,
@@ -447,7 +531,8 @@
       "price": 22000,
       "isStock": true,
       "brand": "Pioneer",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 27,
@@ -457,7 +542,8 @@
       "price": 10500,
       "isStock": true,
       "brand": "Marshall",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 28,
@@ -467,7 +553,8 @@
       "price": 1800,
       "isStock": true,
       "brand": "Hercules",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 29,
@@ -477,7 +564,8 @@
       "price": 4200,
       "isStock": true,
       "brand": "Audio-Technica",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 30,
@@ -487,7 +575,8 @@
       "price": 900,
       "isStock": true,
       "brand": "Givson",
-      "color": "Silver"
+      "color": "Silver",
+      "category": "percussion"
     },
     {
       "id": 31,
@@ -497,7 +586,8 @@
       "price": 1200,
       "isStock": true,
       "brand": "Korg",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 32,
@@ -507,7 +597,8 @@
       "price": 450,
       "isStock": true,
       "brand": "Dunlop",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 33,
@@ -517,7 +608,8 @@
       "price": 950,
       "isStock": true,
       "brand": "Pluto",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 34,
@@ -527,7 +619,8 @@
       "price": 1600,
       "isStock": true,
       "brand": "Stentor",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "audio_accessory"
     },
     {
       "id": 35,
@@ -537,7 +630,8 @@
       "price": 600,
       "isStock": true,
       "brand": "Ernie Ball",
-      "color": "Silver"
+      "color": "Silver",
+      "category": "audio_accessory"
     },
     {
       "id": 36,
@@ -547,7 +641,8 @@
       "price": 550,
       "isStock": true,
       "brand": "Vic Firth",
-      "color": "Wood"
+      "color": "Wood",
+      "category": "percussion"
     },
     {
       "id": 37,
@@ -557,7 +652,8 @@
       "price": 4200,
       "isStock": false,
       "brand": "Roland",
-      "color": "Black"
+      "color": "Black",
+      "category": "keyboard"
     },
     {
       "id": 38,
@@ -567,7 +663,8 @@
       "price": 18500,
       "isStock": true,
       "brand": "Behringer",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 39,
@@ -577,7 +674,8 @@
       "price": 16000,
       "isStock": true,
       "brand": "JBL",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 40,
@@ -587,7 +685,8 @@
       "price": 8200,
       "isStock": false,
       "brand": "Shure",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 41,
@@ -597,7 +696,8 @@
       "price": 3600,
       "isStock": true,
       "brand": "Boss",
-      "color": "Orange"
+      "color": "Orange",
+      "category": "audio_accessory"
     },
     {
       "id": 42,
@@ -607,7 +707,8 @@
       "price": 5200,
       "isStock": true,
       "brand": "Tama",
-      "color": "Black"
+      "color": "Black",
+      "category": "percussion"
     },
     {
       "id": 43,
@@ -617,7 +718,8 @@
       "price": 3400,
       "isStock": true,
       "brand": "Gator",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 44,
@@ -627,7 +729,8 @@
       "price": 2800,
       "isStock": true,
       "brand": "Stentor",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 45,
@@ -637,7 +740,8 @@
       "price": 7500,
       "isStock": false,
       "brand": "Adams",
-      "color": "Multi"
+      "color": "Multi",
+      "category": "percussion"
     },
     {
       "id": 46,
@@ -647,7 +751,8 @@
       "price": 650,
       "isStock": true,
       "brand": "Yamaha",
-      "color": "White"
+      "color": "White",
+      "category": "string"
     },
     {
       "id": 47,
@@ -657,7 +762,8 @@
       "price": 13500,
       "isStock": false,
       "brand": "Rogue",
-      "color": "Brown"
+      "color": "Brown",
+      "category": "string"
     },
     {
       "id": 48,
@@ -667,7 +773,8 @@
       "price": 78000,
       "isStock": false,
       "brand": "Salvi",
-      "color": "Gold"
+      "color": "Gold",
+      "category": "string"
     },
     {
       "id": 49,
@@ -677,7 +784,8 @@
       "price": 850,
       "isStock": true,
       "brand": "Korg",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     },
     {
       "id": 50,
@@ -687,7 +795,8 @@
       "price": 14500,
       "isStock": true,
       "brand": "Chauvet",
-      "color": "Black"
+      "color": "Black",
+      "category": "audio_accessory"
     }
   ]
 }

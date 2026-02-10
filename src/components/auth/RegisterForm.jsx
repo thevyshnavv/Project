@@ -11,10 +11,11 @@ function RegisterForm() {
     email: "",
     password: "",
     conformPassword: "",
+    role: "user",
     cart: [],
     orders: [],
     wishlist: [],
-    isBlock: true
+    isBlock: false
 
   })
   const handleChange = (e) => {
@@ -90,7 +91,7 @@ function RegisterForm() {
           <div>
             <span className="block text-sm text-gray-300 mb-1">Password</span>
             <input
-              type="password "
+              type="password"
               name="password"
               value={user.password}
               onChange={handleChange}

@@ -26,7 +26,7 @@ const Header = ({search,setSearch}) => {
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-12 h-12 rounded-full  bg-gradient-to-br to-cyan-400 shadow-lg">
-            <img src="public/favIcon.jpg" alt="" className="text-white font-bold text-lg rounded-full" />
+            <img src="public/favIcon.jpg" alt="logo" className="text-white font-bold text-lg rounded-full" />
           </div>
           <Link to="/">
           <span className="text-white font-semibold text-lg tracking-wide">
