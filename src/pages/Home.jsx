@@ -23,7 +23,7 @@ function Home({ search }) {
 
   const { addItemCart } = useContext(CartContext);
   const { state: wishState, addItemWishList, removeItemWishList } =
-  useContext(WishListContext);
+    useContext(WishListContext);
 
 
   // unique categories with one sample image
@@ -33,46 +33,46 @@ function Home({ search }) {
     ).values()
   );
   const isInWishlist = (id) =>
-  wishState.wishlist.some(item => item.id === id);
+    wishState.wishlist.some(item => item.id === id);
 
 
   return (
     <>
       {/* Category Cards */}
       <div className="w-full flex justify-center">
-  <div className="max-w-6xl w-full px-6">
-    <div className="flex flex-wrap justify-center gap-8 py-8">
-      {loading
-        ? Array(10).fill(0).map((_, i) => (
-            <div
-              key={i}
-              className="w-44 bg-white rounded-2xl shadow-sm overflow-hidden"
-            >
-              <ShimmerBox className="h-28 w-full" />
-              <div className="p-3 flex justify-center">
-                <ShimmerBox className="h-4 w-3/4 rounded-md" />
-              </div>
-            </div>
-          ))
-        : categories.map(cat => (
-            <Link
-              key={cat.category}
-              to={`/category/${cat.category}`}
-              className="w-44 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-3 transition-all duration-300 overflow-hidden"
-            >
-              <img
-                src={cat.image}
-                alt={cat.category}
-                className="h-28 w-full object-cover"
-              />
-              <div className="p-3 text-center text-sm font-semibold capitalize tracking-wide">
-                {cat.category.replace("_", " ")}
-              </div>
-            </Link>
-          ))}
-    </div>
-  </div>
-</div>
+        <div className="max-w-6xl w-full px-6">
+          <div className="flex flex-wrap justify-center gap-8 py-8">
+            {loading
+              ? Array(10).fill(0).map((_, i) => (
+                <div
+                  key={i}
+                  className="w-44 bg-white rounded-2xl shadow-sm overflow-hidden"
+                >
+                  <ShimmerBox className="h-28 w-full" />
+                  <div className="p-3 flex justify-center">
+                    <ShimmerBox className="h-4 w-3/4 rounded-md" />
+                  </div>
+                </div>
+              ))
+              : categories.map(cat => (
+                <Link
+                  key={cat.category}
+                  to={`/category/${cat.category}`}
+                  className="w-44 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-3 transition-all duration-300 overflow-hidden"
+                >
+                  <img
+                    src={cat.image}
+                    alt={cat.category}
+                    className="h-28 w-full object-cover"
+                  />
+                  <div className="p-3 text-center text-sm font-semibold capitalize tracking-wide">
+                    {cat.category.replace("_", " ")}
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </div>
 
 
       {/* Products */}
@@ -119,11 +119,28 @@ function Home({ search }) {
                     Add to Cart
                   </button>
                   <button
-                    onClick={() => addItemWishList(product.id)}
-                    className="w-10 h-10 rounded-full border"
+                    onClick={() =>
+                      isInWishlist(product.id)
+                        ? removeItemWishList(product.id)
+                        : addItemWishList(product.id)
+                    }
+                    className={`w-10 h-10 flex items-center justify-center rounded-full border
+    transition-all duration-300
+    ${isInWishlist(product.id)
+                        ? "border-red-500 bg-red-50"
+                        : "border-gray-300"
+                      }`}
                   >
-                    ❤
+                    <i
+                      className={`fa-heart fa-beat-fade text-lg
+      ${isInWishlist(product.id)
+                          ? "fa-solid text-red-500"
+                          : "fa-regular text-gray-400"
+                        }`}
+                    />
                   </button>
+
+
                 </div>
               </div>
             ))}

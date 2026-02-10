@@ -5,63 +5,7 @@
       "email": "vyshnav@gmail.com",
       "password": "1234",
       "role": "user",
-      "cart": [
-        {
-          "id": 7,
-          "name": "Drum Set",
-          "image": "https://i.pinimg.com/736x/b5/f1/21/b5f1216d4d2a28fc0c354ac73fda7e10.jpg",
-          "description": "5-piece drum kit for live performance.",
-          "price": 24000,
-          "isStock": true,
-          "brand": "Pearl",
-          "color": "Red",
-          "category": "percussion"
-        },
-        {
-          "id": 9,
-          "name": "Violin",
-          "image": "https://i.pinimg.com/736x/d9/5a/00/d95a00a8cf747933cda6d9652302fb14.jpg",
-          "description": "Classical violin for beginners.",
-          "price": 6000,
-          "isStock": true,
-          "brand": "Stentor",
-          "color": "Brown",
-          "category": "string"
-        },
-        {
-          "id": 22,
-          "name": "Cajon",
-          "image": "https://i.pinimg.com/736x/65/55/ec/6555ec0c1b48a1da7631327d1a6ab752.jpg",
-          "description": "Box percussion instrument.",
-          "price": 6200,
-          "isStock": true,
-          "brand": "Meinl",
-          "color": "Wood",
-          "category": "percussion"
-        },
-        {
-          "id": 4,
-          "name": "Classical Guitar",
-          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
-          "description": "Nylon-string guitar for classical music.",
-          "price": 5000,
-          "isStock": true,
-          "brand": "Juarez",
-          "color": "Brown",
-          "category": "string"
-        },
-        {
-          "id": 2,
-          "name": "Electric Guitar",
-          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
-          "description": "Solid body electric guitar for rock music.",
-          "price": 9000,
-          "isStock": false,
-          "brand": "Fender",
-          "color": "Black",
-          "category": "string"
-        }
-      ],
+      "cart": [],
       "orders": [
         {
           "id": 1770375462370,
@@ -185,6 +129,69 @@
           "total": 5500,
           "date": "2026-02-06T10:58:18.788Z",
           "status": "Order placed"
+        },
+        {
+          "id": 1770733183185,
+          "items": [
+            {
+              "id": 7,
+              "name": "Drum Set",
+              "image": "https://i.pinimg.com/736x/b5/f1/21/b5f1216d4d2a28fc0c354ac73fda7e10.jpg",
+              "description": "5-piece drum kit for live performance.",
+              "price": 24000,
+              "isStock": true,
+              "brand": "Pearl",
+              "color": "Red",
+              "category": "percussion"
+            },
+            {
+              "id": 9,
+              "name": "Violin",
+              "image": "https://i.pinimg.com/736x/d9/5a/00/d95a00a8cf747933cda6d9652302fb14.jpg",
+              "description": "Classical violin for beginners.",
+              "price": 6000,
+              "isStock": true,
+              "brand": "Stentor",
+              "color": "Brown",
+              "category": "string"
+            },
+            {
+              "id": 22,
+              "name": "Cajon",
+              "image": "https://i.pinimg.com/736x/65/55/ec/6555ec0c1b48a1da7631327d1a6ab752.jpg",
+              "description": "Box percussion instrument.",
+              "price": 6200,
+              "isStock": true,
+              "brand": "Meinl",
+              "color": "Wood",
+              "category": "percussion"
+            },
+            {
+              "id": 4,
+              "name": "Classical Guitar",
+              "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+              "description": "Nylon-string guitar for classical music.",
+              "price": 5000,
+              "isStock": true,
+              "brand": "Juarez",
+              "color": "Brown",
+              "category": "string"
+            },
+            {
+              "id": 2,
+              "name": "Electric Guitar",
+              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+              "description": "Solid body electric guitar for rock music.",
+              "price": 9000,
+              "isStock": false,
+              "brand": "Fender",
+              "color": "Black",
+              "category": "string"
+            }
+          ],
+          "total": 50200,
+          "date": "2026-02-10T14:19:43.185Z",
+          "status": "Order placed"
         }
       ],
       "wishlist": [
@@ -211,17 +218,6 @@
           "category": "string"
         },
         {
-          "id": 3,
-          "name": "Bass Guitar",
-          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-          "description": "4-string bass guitar with deep tone.",
-          "price": 8500,
-          "isStock": false,
-          "brand": "Ibanez",
-          "color": "Blue",
-          "category": "string"
-        },
-        {
           "id": 4,
           "name": "Classical Guitar",
           "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
@@ -230,6 +226,28 @@
           "isStock": true,
           "brand": "Juarez",
           "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 5,
+          "name": "Digital Keyboard",
+          "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
+          "description": "61-key keyboard with multiple sounds.",
+          "price": 12000,
+          "isStock": true,
+          "brand": "Casio",
+          "color": "White",
+          "category": "keyboard"
+        },
+        {
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
+          "isStock": false,
+          "brand": "Ibanez",
+          "color": "Blue",
           "category": "string"
         }
       ],
@@ -451,6 +469,299 @@
       ],
       "isBlock": false,
       "id": 102
+    },
+    {
+      "name": "kannappi",
+      "email": "kannu@gmail.com",
+      "password": "12345",
+      "conformPassword": "12345",
+      "role": "user",
+      "cart": [],
+      "orders": [
+        {
+          "id": 1770728985820,
+          "items": [
+            {
+              "id": 3,
+              "name": "Bass Guitar",
+              "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+              "description": "4-string bass guitar with deep tone.",
+              "price": 8500,
+              "isStock": false,
+              "brand": "Ibanez",
+              "color": "Blue",
+              "category": "string"
+            },
+            {
+              "id": 2,
+              "name": "Electric Guitar",
+              "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+              "description": "Solid body electric guitar for rock music.",
+              "price": 9000,
+              "isStock": false,
+              "brand": "Fender",
+              "color": "Black",
+              "category": "string"
+            }
+          ],
+          "total": 17500,
+          "date": "2026-02-10T13:09:45.820Z",
+          "status": "Order placed"
+        },
+        {
+          "id": 1770729031267,
+          "items": [
+            {
+              "id": 22,
+              "name": "Cajon",
+              "image": "https://i.pinimg.com/736x/65/55/ec/6555ec0c1b48a1da7631327d1a6ab752.jpg",
+              "description": "Box percussion instrument.",
+              "price": 6200,
+              "isStock": true,
+              "brand": "Meinl",
+              "color": "Wood",
+              "category": "percussion"
+            },
+            {
+              "id": 21,
+              "name": "Ukulele",
+              "image": "https://i.pinimg.com/1200x/d8/d1/02/d8d1029fbc9790f1072585421485230b.jpg",
+              "description": "Small 4-string ukulele for beginners.",
+              "price": 2800,
+              "isStock": true,
+              "brand": "Kala",
+              "color": "Natural",
+              "category": "string"
+            },
+            {
+              "id": 23,
+              "name": "Studio Microphone",
+              "image": "https://i.pinimg.com/1200x/24/51/fe/2451fe9c3ac55d616e4f283caff02b40.jpg",
+              "description": "Condenser microphone for recording.",
+              "price": 7500,
+              "isStock": true,
+              "brand": "Blue",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 24,
+              "name": "Audio Interface",
+              "image": "https://i.pinimg.com/736x/e0/dc/3e/e0dc3e82e41ccb399ffd3367940f060a.jpg",
+              "description": "USB audio interface for home studio.",
+              "price": 9800,
+              "isStock": true,
+              "brand": "Focusrite",
+              "color": "Red",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 25,
+              "name": "MIDI Controller",
+              "image": "https://i.pinimg.com/736x/d6/d5/57/d6d5570e7e3a5ab1d7cdf7331ef9a5da.jpg",
+              "description": "Keyboard MIDI controller.",
+              "price": 6500,
+              "isStock": false,
+              "brand": "Akai",
+              "color": "Black",
+              "category": "keyboard"
+            },
+            {
+              "id": 30,
+              "name": "Tambourine",
+              "image": "https://i.pinimg.com/736x/76/be/30/76be308a34964d4411f618350b16bd77.jpg",
+              "description": "Handheld rhythm instrument.",
+              "price": 900,
+              "isStock": true,
+              "brand": "Givson",
+              "color": "Silver",
+              "category": "percussion"
+            },
+            {
+              "id": 28,
+              "name": "Keyboard Stand",
+              "image": "https://i.pinimg.com/736x/0e/0c/04/0e0c042b964237e7e9098c328b26fd4f.jpg",
+              "description": "Adjustable keyboard stand.",
+              "price": 1800,
+              "isStock": true,
+              "brand": "Hercules",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 27,
+              "name": "Guitar Amplifier",
+              "image": "https://i.pinimg.com/736x/a5/b7/a6/a5b7a6af3425de4bd17fdb2a06e35d4f.jpg",
+              "description": "Amplifier for electric guitars.",
+              "price": 10500,
+              "isStock": true,
+              "brand": "Marshall",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 26,
+              "name": "DJ Controller",
+              "image": "https://i.pinimg.com/1200x/f6/d4/36/f6d436986c9143d1e5ccaafbbe2d3dad.jpg",
+              "description": "Professional DJ mixing controller.",
+              "price": 22000,
+              "isStock": true,
+              "brand": "Pioneer",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 31,
+              "name": "Metronome",
+              "image": "https://i.pinimg.com/1200x/16/a4/cd/16a4cd1f31f044e2bf42db72b7931d26.jpg",
+              "description": "Digital metronome for practice.",
+              "price": 1200,
+              "isStock": true,
+              "brand": "Korg",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 32,
+              "name": "Guitar Capo",
+              "image": "https://i.pinimg.com/736x/34/17/e3/3417e36ad2ffde8dc65bad2d4c7668ee.jpg",
+              "description": "Capo for acoustic and electric guitar.",
+              "price": 450,
+              "isStock": true,
+              "brand": "Dunlop",
+              "color": "Black",
+              "category": "audio_accessory"
+            },
+            {
+              "id": 33,
+              "name": "Music Stand",
+              "image": "https://i.pinimg.com/736x/3e/3d/21/3e3d2177a8bd21af2d08ca987a2e2771.jpg",
+              "description": "Foldable music stand.",
+              "price": 950,
+              "isStock": true,
+              "brand": "Pluto",
+              "color": "Black",
+              "category": "audio_accessory"
+            }
+          ],
+          "total": 70600,
+          "date": "2026-02-10T13:10:31.267Z",
+          "status": "Order placed"
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
+          "isStock": false,
+          "brand": "Ibanez",
+          "color": "Blue",
+          "category": "string"
+        },
+        {
+          "id": 1,
+          "name": "Acoustic Guitar",
+          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+          "description": "Full-size acoustic guitar with warm sound",
+          "price": "9000",
+          "isStock": true,
+          "brand": "Yamaha",
+          "color": "Natural",
+          "category": "string"
+        },
+        {
+          "id": 2,
+          "name": "Electric Guitar",
+          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
+          "description": "Solid body electric guitar for rock music.",
+          "price": 9000,
+          "isStock": false,
+          "brand": "Fender",
+          "color": "Black",
+          "category": "string"
+        },
+        {
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 5,
+          "name": "Digital Keyboard",
+          "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
+          "description": "61-key keyboard with multiple sounds.",
+          "price": 12000,
+          "isStock": true,
+          "brand": "Casio",
+          "color": "White",
+          "category": "keyboard"
+        },
+        {
+          "id": 13,
+          "name": "Saxophone",
+          "image": "https://i.pinimg.com/736x/c1/ca/7e/c1ca7e60d727c3811476df7947b07578.jpg",
+          "description": "Alto saxophone for jazz music.",
+          "price": 18000,
+          "isStock": false,
+          "brand": "Selmer",
+          "color": "Golden",
+          "category": "string"
+        },
+        {
+          "id": 17,
+          "name": "Harmonium",
+          "image": "https://i.pinimg.com/1200x/55/cf/01/55cf01af340cf4dc9dc205eeddbf04d5.jpg",
+          "description": "Hand-pumped harmonium.",
+          "price": 9500,
+          "isStock": false,
+          "brand": "Bina",
+          "color": "Brown",
+          "category": "keyboard"
+        }
+      ],
+      "isBlock": false,
+      "id": 103
+    },
+    {
+      "name": "Arattannan",
+      "email": "aru@gmai.com",
+      "password": "1234",
+      "conformPassword": "1234",
+      "role": "user",
+      "cart": [],
+      "orders": [
+        {
+          "id": 1770729263579,
+          "items": [
+            {
+              "id": 1,
+              "name": "Acoustic Guitar",
+              "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+              "description": "Full-size acoustic guitar with warm sound",
+              "price": "9000",
+              "isStock": true,
+              "brand": "Yamaha",
+              "color": "Natural",
+              "category": "string"
+            }
+          ],
+          "total": "09000",
+          "date": "2026-02-10T13:14:23.579Z",
+          "status": "Order placed"
+        }
+      ],
+      "wishlist": [],
+      "isBlock": false,
+      "id": 104
     }
   ],
   "products": [
