@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import axios from 'axios'
-// import { toast } from 'react-toastify'
+import api from '../../api';
 import toast from 'react-hot-toast'
+import bgImage from "../../assets/register_picture.jpg";
+
 
 
 function RegisterForm() {
@@ -34,7 +35,7 @@ function RegisterForm() {
       })
       return;
     }
-    axios.post("http://localhost:3000/users", user)
+    api.post("/users", user)
       .then((res) => {
         
         toast.success("Registration succesful")
@@ -52,80 +53,93 @@ function RegisterForm() {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#10172a]">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-md bg-[#1b2340] p-8 rounded-xl shadow-lg"
-      >
-        <h2 className="text-2xl font-semibold text-white text-center mb-6">
-          Register in InstruBay
-        </h2>
+  <div
+    className="w-screen h-screen flex justify-center items-center bg-cover bg-center"
+    style={{ backgroundImage: `url(${bgImage})` }}
+  >
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="flex flex-col gap-4">
-          <div>
-            <span className="block text-sm text-gray-300 mb-1">Name</span>
-            <input
-              type="text"
-              name="name"
-              value={user.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              required
-              className="w-full px-4 py-2 rounded-md bg-[#10172a] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
+    {/* Card */}
+    <form
+      onSubmit={handleSubmit}
+      className="relative z-10 w-full max-w-md p-8 rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl"
+    >
+      <h2 className="text-3xl font-bold text-white text-center mb-6">
+        Create Account
+      </h2>
 
-          <div>
-            <span className="block text-sm text-gray-300 mb-1">Email</span>
-            <input
-              type="email"
-              name="email"
-              value={user.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
-              className="w-full px-4 py-2 rounded-md bg-[#10172a] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-
-          <div>
-            <span className="block text-sm text-gray-300 mb-1">Password</span>
-            <input
-              type="password"
-              name="password"
-              value={user.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              required
-              className="w-full px-4 py-2 rounded-md bg-[#10172a] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-
-          <div>
-            <span className="block text-sm text-gray-300 mb-1">
-              Confirm Password
-            </span>
-            <input
-              type="password    "
-              name="conformPassword"
-              value={user.conformPassword}
-              onChange={handleChange}
-              placeholder="Re-enter your password"
-              required
-              className="w-full px-4 py-2 rounded-md bg-[#10172a] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="mt-4 w-full py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-500 transition"
-          >
-            Register
-          </button>
+      <div className="flex flex-col gap-4">
+        {/* Name */}
+        <div>
+          <label className="block text-sm text-gray-200 mb-1">Name</label>
+          <input
+            type="text"
+            name="name"
+            value={user.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          />
         </div>
-      </form>
-    </div>
-  )
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm text-gray-200 mb-1">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+        </div>
+
+        {/* Password */}
+        <div>
+          <label className="block text-sm text-gray-200 mb-1">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={user.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+        </div>
+
+        {/* Confirm Password */}
+        <div>
+          <label className="block text-sm text-gray-200 mb-1">
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            name="conformPassword"
+            value={user.conformPassword}
+            onChange={handleChange}
+            placeholder="Re-enter your password"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+        </div>
+
+        {/* Register Button */}
+        <button
+          type="submit"
+          className="mt-4 w-full py-2 rounded-lg bg-gray-600 text-white font-semibold hover:bg-pink-600 transition duration-300 shadow-lg"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+);
+
 
 }
 

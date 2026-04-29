@@ -4,3 +4,14 @@
 body{
     background-color: rgb(255, 246, 236);
 }
+
+@import "tailwindcss";
+/* 
+body {
+  background-image: url("./assets/register_picture.jpg");
+  background-size: cover;      
+  background-position: center;   
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
+  min-height: 100vh;
+} */

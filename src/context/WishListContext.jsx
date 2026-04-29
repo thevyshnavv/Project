@@ -1,6 +1,6 @@
-import axios from "axios"
 import toast from 'react-hot-toast'
 import { createContext, useReducer } from "react"
+import api from '../api'
 
 const initialState = { wishlist: [] }
 const WishListContext = createContext()
@@ -35,8 +35,8 @@ const WishListProvider = ({ children }) => {
 
     // get cart
     //-------------------------------------------------------------------------------------------------------------
-    const getwishList = async (userId) => {
-        const res = await axios.get(`http://localhost:3000/users/${userId}`)
+    const getWishList = async (userId) => {
+        const res = await api.get(`/users/${userId}`)
         dispatch({
             type: WISH_LIST_ACTIONS.GET_ITEM_WISH_LIST,
             payload: res.data.wishlist
@@ -49,10 +49,10 @@ const WishListProvider = ({ children }) => {
         const user = JSON.parse(localStorage.getItem("userName"))
         if (!user) return
 
-        const productRes = await axios.get(`http://localhost:3000/products/${productId}`)
+        const productRes = await api.get(`/products/${productId}`)
         const product = productRes.data
 
-        const userRes = await axios.get(`http://localhost:3000/users/${user.id}`)
+        const userRes = await api.get(`/users/${user.id}`)
         const currentUser = userRes.data
 
         const exitst = currentUser.wishlist.find(item => item.id === productId)
@@ -60,7 +60,7 @@ const WishListProvider = ({ children }) => {
 
         const updatedWishList = [...currentUser.wishlist, product]
 
-        await axios.patch(`http://localhost:3000/users/${user.id}`, {
+        await api.patch(`/users/${user.id}`, {
             wishlist: updatedWishList
         })
         dispatch({
@@ -78,7 +78,7 @@ const WishListProvider = ({ children }) => {
 
         const updatedWishList = state.wishlist.filter(item => item.id !== productId)
 
-        await axios.patch(`http://localhost:3000/users/${user.id}`, {
+        await api.patch(`/users/${user.id}`, {
             wishlist: updatedWishList
         })
 
@@ -90,7 +90,7 @@ const WishListProvider = ({ children }) => {
     }
 
     return <WishListContext.Provider
-        value={{ state, addItemWishList, getwishList, removeItemWishList }}>
+        value={{ state, addItemWishList, getWishList, removeItemWishList }}>
         {children}
     </WishListContext.Provider>
 }

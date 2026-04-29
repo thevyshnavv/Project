@@ -5,7 +5,30 @@
       "email": "vyshnav@gmail.com",
       "password": "1234",
       "role": "user",
-      "cart": [],
+      "cart": [
+        {
+          "id": 4,
+          "name": "Classical Guitar",
+          "image": "https://i.pinimg.com/736x/5c/84/63/5c8463b08c1ab44434beab599fd253f1.jpg",
+          "description": "Nylon-string guitar for classical music.",
+          "price": 5000,
+          "isStock": true,
+          "brand": "Juarez",
+          "color": "Brown",
+          "category": "string"
+        },
+        {
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
+          "isStock": false,
+          "brand": "Ibanez",
+          "color": "Blue",
+          "category": "string"
+        }
+      ],
       "orders": [
         {
           "id": 1770375462370,
@@ -196,25 +219,14 @@
       ],
       "wishlist": [
         {
-          "id": 2,
-          "name": "Electric Guitar",
-          "image": "https://i.pinimg.com/1200x/fd/1f/3b/fd1f3bf865195e5f03a946198502414a.jpg",
-          "description": "Solid body electric guitar for rock music.",
-          "price": 9000,
+          "id": 3,
+          "name": "Bass Guitar",
+          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
+          "description": "4-string bass guitar with deep tone.",
+          "price": 8500,
           "isStock": false,
-          "brand": "Fender",
-          "color": "Black",
-          "category": "string"
-        },
-        {
-          "id": 1,
-          "name": "Acoustic Guitar",
-          "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-          "description": "Full-size acoustic guitar with warm sound",
-          "price": "9000",
-          "isStock": true,
-          "brand": "Yamaha",
-          "color": "Natural",
+          "brand": "Ibanez",
+          "color": "Blue",
           "category": "string"
         },
         {
@@ -229,26 +241,26 @@
           "category": "string"
         },
         {
-          "id": 5,
-          "name": "Digital Keyboard",
-          "image": "https://i.pinimg.com/736x/f4/8f/62/f48f626faa6361d02508eb94bef30d8c.jpg",
-          "description": "61-key keyboard with multiple sounds.",
-          "price": 12000,
+          "id": 42,
+          "name": "Drum Throne",
+          "image": "https://i.pinimg.com/1200x/c0/be/5e/c0be5eaf0029988ed2e38b949b8a7e40.jpg",
+          "description": "Comfortable drum seat.",
+          "price": 5200,
           "isStock": true,
-          "brand": "Casio",
-          "color": "White",
-          "category": "keyboard"
+          "brand": "Tama",
+          "color": "Black",
+          "category": "percussion"
         },
         {
-          "id": 3,
-          "name": "Bass Guitar",
-          "image": "https://i.pinimg.com/1200x/e6/ec/a7/e6eca713d3828b0479e5080880a19d7f.jpg",
-          "description": "4-string bass guitar with deep tone.",
-          "price": 8500,
-          "isStock": false,
-          "brand": "Ibanez",
-          "color": "Blue",
-          "category": "string"
+          "id": 16,
+          "name": "Tabla",
+          "image": "https://i.pinimg.com/736x/b2/d4/0f/b2d40f10cd792f0bffd1f66fad76cc8b.jpg",
+          "description": "Traditional Indian tabla set.",
+          "price": 5500,
+          "isStock": true,
+          "brand": "SG Musical",
+          "color": "Wood",
+          "category": "percussion"
         }
       ],
       "isBlock": false,
@@ -259,8 +271,7 @@
       "name": "Admin",
       "email": "admin@gmail.com",
       "password": "admin123",
-      "role": "admin",
-      "isBlock": false
+      "role": "admin"
     },
     {
       "name": "sayipp",
@@ -271,7 +282,7 @@
       "cart": [],
       "orders": [],
       "wishlist": [],
-      "isBlock": true,
+      "isBlock": false,
       "id": 100
     },
     {
@@ -383,7 +394,7 @@
           "name": "Acoustic Guitar",
           "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
           "description": "Full-size acoustic guitar with warm sound",
-          "price": "9000",
+          "price": 9000,
           "isStock": true,
           "brand": "Yamaha",
           "color": "Natural",
@@ -666,7 +677,7 @@
           "name": "Acoustic Guitar",
           "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
           "description": "Full-size acoustic guitar with warm sound",
-          "price": "9000",
+          "price": 9000,
           "isStock": true,
           "brand": "Yamaha",
           "color": "Natural",
@@ -747,14 +758,14 @@
               "name": "Acoustic Guitar",
               "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
               "description": "Full-size acoustic guitar with warm sound",
-              "price": "9000",
+              "price": 9000,
               "isStock": true,
               "brand": "Yamaha",
               "color": "Natural",
               "category": "string"
             }
           ],
-          "total": "09000",
+          "total": 9000,
           "date": "2026-02-10T13:14:23.579Z",
           "status": "Order placed"
         }
@@ -770,7 +781,7 @@
       "name": "Acoustic Guitar",
       "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
       "description": "Full-size acoustic guitar with warm sound",
-      "price": "9000",
+      "price": 9000,
       "isStock": true,
       "brand": "Yamaha",
       "color": "Natural",

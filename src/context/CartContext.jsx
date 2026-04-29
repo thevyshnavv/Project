@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../api'
 import React, { useReducer, createContext } from 'react'
 import toast from 'react-hot-toast'
 
@@ -37,7 +37,7 @@ const CartProvider = ({ children }) => {
 
   // get cart
   const getCart = async (userId) => {
-    const res = await axios.get(`http://localhost:3000/users/${userId}`)
+    const res = await api.get(`/users/${userId}`)
     dispatch({
       type: CART_ACTIONS.GET_MY_CART,
       payload: res.data.cart
@@ -45,11 +45,11 @@ const CartProvider = ({ children }) => {
   }
 
   //add item to order
-  const addItemOders = async () => {
+  const addItemOrders = async () => {
     const user = JSON.parse(localStorage.getItem("userName"))
     if (!user) return
 
-    const userRes = await axios.get(`http://localhost:3000/users/${user.id}`)
+    const userRes = await api.get(`/users/${user.id}`)
     const currentUser = userRes.data
 
     if (currentUser.cart.length === 0) return
@@ -64,7 +64,7 @@ const CartProvider = ({ children }) => {
 
     const updateOrders = [...currentUser.orders, newOrder]
 
-    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+    await api.patch(`/users/${user.id}`, {
       orders: updateOrders,
       cart: []
     })
@@ -82,7 +82,7 @@ const CartProvider = ({ children }) => {
   }
   // get orders
 const getOrders = async (userId) => {
-  const res = await axios.get(`http://localhost:3000/users/${userId}`)
+  const res = await api.get(`/users/${userId}`)
   dispatch({
     type: CART_ACTIONS.ADD_ITEM_ORDERS,
     payload: res.data.orders
@@ -95,10 +95,10 @@ const getOrders = async (userId) => {
     const user = JSON.parse(localStorage.getItem("userName"))
     if (!user) return
 
-    const productRes = await axios.get(`http://localhost:3000/products/${productId}`)
+    const productRes = await api.get(`/products/${productId}`)
     const product = productRes.data
 
-    const userRes = await axios.get(`http://localhost:3000/users/${user.id}`)
+    const userRes = await api.get(`/users/${user.id}`)
     const currentUser = userRes.data
 
     const exists = currentUser.cart.find(item => item.id === productId)
@@ -106,7 +106,7 @@ const getOrders = async (userId) => {
 
     const updatedCart = [...currentUser.cart, product]
 
-    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+    await api.patch(`/users/${user.id}`, {
       cart: updatedCart
     })
 
@@ -128,7 +128,7 @@ const getOrders = async (userId) => {
 
     const updatedCart = state.cart.filter(item => item.id !== productId)
 
-    await axios.patch(`http://localhost:3000/users/${user.id}`, {
+    await api.patch(`/users/${user.id}`, {
       cart: updatedCart
     })
 
@@ -146,7 +146,7 @@ const getOrders = async (userId) => {
         getCart,
         addItemCart,
         removeItemCart,
-        addItemOders,
+        addItemOrders,
         getOrders,
         subTotal,
         delivery,

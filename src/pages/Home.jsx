@@ -58,7 +58,7 @@ function Home({ search }) {
                 <Link
                   key={cat.category}
                   to={`/category/${cat.category}`}
-                  className="w-44 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-3 transition-all duration-300 overflow-hidden"
+                  className="w-44 backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-3 transition-all duration-300 overflow-hidden"
                 >
                   <img
                     src={cat.image}
@@ -79,7 +79,7 @@ function Home({ search }) {
       <div className="flex flex-wrap gap-6 m-15">
         {loading
           ? Array(8).fill(0).map((_, i) => (
-            <div key={i} className="w-64 bg-white rounded-xl shadow overflow-hidden">
+            <div key={i} className="w-64 backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-xl shadow overflow-hidden">
               <ShimmerBox className="h-40 w-full" />
               <div className="p-2 space-y-2">
                 <ShimmerBox className="h-4 w-full rounded" />
@@ -99,7 +99,7 @@ function Home({ search }) {
               return words.every(w => value.includes(w));
             })
             .map(product => (
-              <div key={product.id} className="w-64 bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden hover:-translate-y-3 transition-all duration-300">
+              <div key={product.id} className="w-64 backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-xl shadow-md hover:shadow-lg overflow-hidden hover:-translate-y-3 transition-all duration-300">
                 <Link to={`/ProductDetails/${product.id}`}>
                   <img src={product.image} className="h-40 w-full object-cover" />
                 </Link>

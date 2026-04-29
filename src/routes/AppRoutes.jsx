@@ -16,7 +16,7 @@ import WishListProvider from '../context/WishListContext'
 
 // layouts
 import UserLayout from '../layout/UserLayout'
-import AdminLayout from '../admin/AdminLayout'
+import AdminLayout from '../layout/AdminLayout'
 
 // admin pages
 import AdminDashboard from '../admin/pages/AdminDashboard'
@@ -40,16 +40,15 @@ function AppRoutes() {
             {/* USER LAYOUT */}
             <Route element={<UserLayout search={search} setSearch={setSearch} />}>
               <Route path="/" element={<Home search={search} />} />
-              <Route path="/loginform" element={<LoginFrom />} />
-              <Route path="/registerform" element={<RegisterForm />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/productdetails/:id" element={<ProductDetails />} />
               <Route path="/wishlist" element={<WishList />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/category/:category" element={<CategoryProducts />} />
-
             </Route>
+              <Route path="/loginform" element={<LoginFrom />} />
+              <Route path="/registerform" element={<RegisterForm />} />
 
             {/* ADMIN LAYOUT */}
             <Route element={<AdminLayout />}>

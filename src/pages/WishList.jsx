@@ -3,13 +3,13 @@ import { WishListContext } from '../context/WishListContext'
 import { CartContext } from '../context/CartContext'
 
 function WishList() {
-  const { state, getwishList, removeItemWishList } = useContext(WishListContext)
+  const { state, getWishList, removeItemWishList } = useContext(WishListContext)
   const {addItemCart} = useContext(CartContext)
 
   useEffect(() => {
     let user = localStorage.getItem("userName")
     user = JSON.parse(user)
-    getwishList(user?.id)
+    getWishList(user?.id)
   }, [])
   return (
     <div className="min-h-screen mx-50">

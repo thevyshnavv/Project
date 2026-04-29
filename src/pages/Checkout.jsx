@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 
 function Checkout() {
-  const { state, subTotal, total, delivery, addItemOders } = useContext(CartContext)
+  const { state, subTotal, total, delivery, addItemOrders } = useContext(CartContext)
   const navigate = useNavigate()
 
   const {
@@ -14,7 +14,7 @@ function Checkout() {
   } = useForm({ mode: "onSubmit" })
 
   const handleOrder = async () => {
-    await addItemOders()
+    await addItemOrders()
     navigate("/orders")
   }
 
